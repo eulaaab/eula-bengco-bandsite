@@ -1,0 +1,134 @@
+@font-face {
+  font-family: AvenirUltraThin;
+  src: url("../assets/_Global_Font/AvenirNextProLT/Linotype - AvenirNextLTPro-UltLt.otf");
+}
+
+@font-face {
+  font-family: AvenirThin;
+  src: url("..assets/_Global_Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Thin.otf");
+}
+
+@font-face {
+  font-family: AvenirRegular;
+  src: url("../assets/_Global_Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf");
+}
+
+@font-face {
+  font-family: AvenirMedium;
+  src: url("../assets/_Global_Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Medium.otf");
+}
+
+@font-face {
+  font-family: AvenirLight;
+  src: url("../assets/_Global_Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Light.otf");
+}
+
+@font-face {
+  font-family: AvenirThin;
+  src: url("../assets/_Global_Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Heavy.otf");
+}
+
+@font-face {
+  font-family: AvenirDemi;
+  src: url("../assets/_Global_Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf");
+}
+
+@font-face {
+  font-family: AvenirBold;
+  src: url("../assets/_Global_Font/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf");
+}
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "AvenirRegular", sans-serif;
+}
+
+ul li {
+  list-style: none;
+}
+
+.header {
+  background-color: #323232;
+}
+
+.header__link,
+.header__link:hover,
+.header__link:visited {
+  font-family: "AvenirRegular", sans-serif;
+  color: #ffffff;
+}
+
+.hero {
+  background-image: url("./assets/Images/Hero-image.jpg");
+  width: 100vw;
+}
+
+.hero-title {
+  font-family: "AvenirBold";
+  font-size: 60px;
+  line-height: 68px;
+  color: #ffffff;
+}
+
+.about {
+  background-color: #fafafa;
+  color: #323232;
+}
+
+.heading-2 {
+  font-family: "AvenirBold";
+  font-size: 30px;
+  line-height: 32px;
+}
+
+.about-tagline {
+  font-family: "AvenirMedium";
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.heading-3 {
+  font-family: "AvenirBold";
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.about-tagline-author {
+  font-family: "AvenirBold";
+  font-size: 12px;
+  line-height: 22px;
+}
+
+.about__text-1 {
+  font-family: "AvenirRegular";
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.footer {
+  background-color: #323232;
+  color: #ffffff;
+}
+
+.booking__heading-4 {
+  font-family: "AvenirRegular";
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bolder;
+}
+
+.booking__text {
+  font-family: "AvenirLight";
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.booking__text--bold {
+  font-family: "AvenirBold";
+  font-size: 12px;
+  line-height: 20px;
+}
+/*# sourceMappingURL=styles.css.map */

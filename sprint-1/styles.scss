@@ -1,0 +1,129 @@
+// *,
+// *::before,
+// *::after {
+//   box-sizing: border-box;
+// }
+
+@charset 'utf-8';
+
+@import "./partials/fonts";
+@import "./partials/colors";
+
+//remove browser's margin, and padding settings, text global font is $black
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "AvenirRegular", sans-serif;
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+
+//HEADER
+.header {
+  background-color: $black;
+}
+
+.header__link,
+.header__link:hover,
+.header__link:visited {
+  font-family: "AvenirRegular", sans-serif;
+  color: $white;
+}
+
+//THIS DOESN'T WORK - WHY??
+// .header {
+//   &__link {
+//     &:link,
+//     &:hover,
+//     &:visited {
+//       font-family: "AvenirRegular", sans-serif;
+//       color: $white;
+//     }
+//   }
+// }
+//HERO SECTION
+.hero {
+  background-image: url("./assets/Images/Hero-image.jpg");
+  width: 100vw;
+}
+
+.hero-title {
+  font-family: "AvenirBold";
+  font-size: 60px;
+  line-height: 68px;
+  color: $white;
+}
+
+//ABOUT SECTION
+.about {
+  background-color: $alabaster;
+  color: $black;
+}
+.heading-2 {
+  font-family: "AvenirBold";
+  font-size: 30px;
+  line-height: 32px;
+}
+
+.about-image {
+}
+
+.about-tagline {
+  font-family: "AvenirMedium";
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.heading-3 {
+  font-family: "AvenirBold";
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.about-tagline-author {
+  font-family: "AvenirBold";
+  font-size: 12px;
+  line-height: 22px;
+}
+
+.about {
+  &__text-1 {
+    font-family: "AvenirRegular";
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+//PHOTO GALLERY
+
+//FOOTER SECTION
+.footer {
+  background-color: $black;
+  color: $white;
+}
+
+.booking__heading-4 {
+  font-family: "AvenirRegular";
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bolder;
+}
+
+.booking {
+  &__text {
+    font-family: "AvenirLight";
+    font-size: 12px;
+    line-height: 20px;
+    &--bold {
+      font-family: "AvenirBold";
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}
