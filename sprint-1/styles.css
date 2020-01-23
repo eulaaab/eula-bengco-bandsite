@@ -44,6 +44,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: "AvenirRegular", sans-serif;
+  width: 100%;
+  margin-right: 0px;
+  overflow-x: hidden;
 }
 
 ul li {
@@ -51,7 +54,14 @@ ul li {
 }
 
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: #323232;
+  width: auto;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .header__link,
@@ -61,9 +71,70 @@ ul li {
   color: #ffffff;
 }
 
+.header {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+}
+
+.header-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: 24px;
+}
+
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 0px;
+  overflow-x: auto;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.header__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  min-width: 160px;
+  text-align: center;
+  padding-bottom: 18px;
+  margin-bottom: 0px;
+}
+
+.header__item--active {
+  border-bottom: solid 5px #ffffff;
+}
+
 .hero {
   background-image: url("./assets/Images/Hero-image.jpg");
-  width: 100vw;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 .hero-title {
@@ -74,7 +145,6 @@ ul li {
 }
 
 .about {
-  background-color: #fafafa;
   color: #323232;
 }
 
@@ -102,10 +172,8 @@ ul li {
   line-height: 22px;
 }
 
-.about__text-1 {
-  font-family: "AvenirRegular";
-  font-size: 14px;
-  line-height: 22px;
+.gallery {
+  background-color: #fafafa;
 }
 
 .footer {
@@ -120,15 +188,231 @@ ul li {
   font-weight: bolder;
 }
 
-.booking__text {
-  font-family: "AvenirLight";
-  font-size: 12px;
-  line-height: 20px;
+@media screen and (max-width: 768px) {
+  .header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+  .header-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+    padding-bottom: 16px;
+    height: 7.5vw;
+    padding-top: 8px;
+    padding-bottom: 14px;
+  }
+  .header-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-top: 0px;
+    overflow: hidden;
+  }
+  .header__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .header__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    min-width: 160px;
+    text-align: center;
+    padding-bottom: 8px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1em;
+  }
+  .header__item--active {
+    font-weight: 400;
+    border-bottom: solid 5px #ffffff;
+  }
+  .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 183px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 16px;
+  }
+  .hero-title {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 32px;
+    color: #ffffff;
+    width: 202px;
+  }
+  .heading-2 {
+    padding-top: 32px;
+    margin-bottom: 24px;
+    font-size: 24px;
+  }
+  .about {
+    padding: 0 16px;
+    height: 100%;
+  }
+  .about-image {
+    width: 288px;
+    margin-top: 0px;
+    margin-bottom: 24px;
+  }
+  .about-tagline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: "AvenirRegular";
+    padding-right: 32px;
+    line-height: 20px;
+    width: auto;
+  }
+  .about-tagline-author {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 32px;
+    margin-right: 16px;
+    font-family: "AvenirRegular";
+  }
+  .about-story {
+    margin-right: 16px;
+    width: 100%;
+  }
+  .about-story__text {
+    font-size: 14px;
+    line-height: 20px;
+    padding-right: 16px;
+  }
+  .gallery-column {
+    padding-right: 16px;
+  }
+  .gallery {
+    padding: 0px 16px;
+  }
+  .gallery__image {
+    padding-bottom: 16px;
+    min-width: 288px;
+  }
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 16px;
+  }
+  .social__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-height: 40px;
+  }
+  .social-menu {
+    height: auto;
+    width: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footer-logo {
+    visibility: hidden;
+  }
+  .booking__heading-4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .booking__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 16px;
+  }
+  .booking__text--bold {
+    line-height: 20px;
+    font-weight: 300;
+  }
+  .booking-copyright {
+    width: 65%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
-.booking__text--bold {
-  font-family: "AvenirBold";
-  font-size: 12px;
-  line-height: 20px;
+@media screen and (min-width: 768px) {
+  html {
+    padding: 0px;
+    margin-right: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 80px;
+  }
+  .header-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 20px;
+    width: 20%;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .header-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .header__list {
+    width: 40%;
+  }
+  .header__link {
+    width: 50px;
+  }
+  .hero {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    min-height: 670px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -2,12 +2,25 @@
 
 //PADDING
 $padding-4: 4px;
-$padding-8: 4px;
-$padding-16: 4px;
-$padding-: 4px;
-$padding-4: 4px;
-$padding-4: 4px;
-$padding-4: 4px;
-$padding-4: 4px;
-$padding-4: 4px;
-$padding-4: 4px;
+$padding-8: 8px;
+$padding-16: 16px;
+$padding-24: 24px;
+$padding-32: 32px;
+$padding-40: 40px;
+$padding-48: 48px;
+$padding-56: 56px;
+$padding-64: 64px;
+$padding-80: 80px;
+
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1200px;
+
+// DIVIDER
+// DESK 1080px 1px
+// TABLET 720px 1px
+// MOBILE 288px 1px
+
+// ABOUT IMAGES desk 896px x450px
+// ABOUT IMAGES tablet 720px 362px
+// ABOUT MOBILE 288px 145px
+// GRID desk 193px x 344px tablet 224px x 126px mobile 162px 288px
