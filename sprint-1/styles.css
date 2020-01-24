@@ -135,12 +135,6 @@ ul li {
   }
 }
 
-.header__link,
-.header__link:hover,
-.header__link:visited {
-  color: white;
-}
-
 .header__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -168,20 +162,31 @@ ul li {
   display: flex;
   width: 50%;
   text-align: center;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   margin-bottom: 0px;
   padding-top: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #afafaf;
+}
+
+.header__item--active {
+  color: #ffffff;
+  border-bottom: 5px solid #ffffff;
 }
 
 @media screen and (min-width: 768px) {
   .header__item {
     -webkit-box-sizing: content-box;
             box-sizing: content-box;
-    padding-right: 20px;
+    padding-right: 0px;
     padding-bottom: 20px;
     padding-top: 15px;
-    margin-right: 40px;
+    margin-right: 100px;
+    margin-left: 80px;
     width: 40%;
+    padding-left: 0px;
   }
 }
 
@@ -263,8 +268,8 @@ ul li {
 
 .about-tagline {
   font-family: "AvenirMedium";
-  font-size: 1.4rem;
-  line-height: 22px;
+  font-size: 1.35rem;
+  line-height: 20px;
   margin-top: 24px;
   margin-bottom: 32px;
 }
@@ -285,8 +290,8 @@ ul li {
 }
 
 .heading-3 {
-  font-family: "AvenirBold";
-  font-size: 1.4rem;
+  font-family: "AvenirDemi";
+  font-size: 1.08rem;
   line-height: 24px;
 }
 
@@ -312,9 +317,11 @@ ul li {
 }
 
 .about-story__text {
+  font-size: "AvenirUltraThin";
   margin-top: 24px;
   margin-right: 0px;
   line-height: 22px;
+  font-size: 0.83em;
 }
 
 @media screen and (min-width: 768px) {
@@ -351,8 +358,41 @@ ul li {
   padding-bottom: 40px;
 }
 
+@media screen and (min-width: 768px) {
+  .gallery {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
 .gallery__image {
   padding-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery__image {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: 0px;
+    width: 32%;
+    height: 32%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .gallery-colummn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .footer {
@@ -360,17 +400,25 @@ ul li {
   color: #ffffff;
   padding-left: 16px;
   padding-right: 16px;
+  font-family: "AvenirBold";
+  font-size: 0.8em;
 }
 
 .booking__heading-4 {
   font-family: "AvenirRegular";
-  font-size: 14px;
   line-height: 20px;
-  font-weight: bolder;
 }
 
 .footer-logo {
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .social__list {
@@ -378,6 +426,9 @@ ul li {
   display: -ms-flexbox;
   display: flex;
   padding-bottom: 24px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .social-link {
@@ -385,11 +436,20 @@ ul li {
 }
 
 .social-menu {
-  width: 30px;
+  width: 12%;
+  margin-right: 35px;
+}
+
+@media screen and (min-width: 768px) {
+  .social-menu {
+    width: 7%;
+  }
 }
 
 .social-menu-fb {
-  width: 20px;
+  width: 7%;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 .booking__text {
@@ -401,7 +461,40 @@ ul li {
 }
 
 .booking-copyright {
-  width: 90%;
+  width: 70%;
   padding-top: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-nav-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-right: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .booking-column {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-right: 0px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

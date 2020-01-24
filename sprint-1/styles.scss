@@ -73,13 +73,6 @@ ul {
     width: 70%;
     margin-left: 0px;
   }
-  // overflow-x: auto;
-}
-
-.header__link,
-.header__link:hover,
-.header__link:visited {
-  color: white;
 }
 
 .header {
@@ -98,16 +91,24 @@ ul {
     display: flex;
     width: 50%;
     text-align: center;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     margin-bottom: 0px;
     padding-top: $pixel-16;
+    align-items: center;
+    color: $silver;
+    &--active {
+      color: $white;
+      border-bottom: 5px solid $white;
+    }
     @include tablet {
       box-sizing: content-box;
-      padding-right: 20px;
+      padding-right: 0px;
       padding-bottom: 20px;
       padding-top: 15px;
-      margin-right: 40px;
+      margin-right: 100px;
+      margin-left: 80px;
       width: 40%;
+      padding-left: 0px;
     }
     &--active {
       // border-bottom: solid 5px $white;
@@ -180,8 +181,8 @@ ul {
 
 .about-tagline {
   font-family: "AvenirMedium";
-  font-size: 1.4rem;
-  line-height: 22px;
+  font-size: 1.35rem;
+  line-height: 20px;
   margin-top: $pixel-24;
   margin-bottom: $pixel-32;
   @include tablet {
@@ -196,8 +197,8 @@ ul {
 }
 
 .heading-3 {
-  font-family: "AvenirBold";
-  font-size: 1.4rem;
+  font-family: "AvenirDemi";
+  font-size: 1.08rem;
   line-height: 24px;
   @include tablet {
     font-size: 1.3em;
@@ -217,9 +218,11 @@ ul {
   }
 
   &__text {
+    font-size: "AvenirUltraThin";
     margin-top: $pixel-24;
     margin-right: 0px;
     line-height: 22px;
+    font-size: 0.83em;
     @include tablet {
       display: flex;
       width: 50%;
@@ -240,8 +243,29 @@ ul {
   background-color: $alabaster;
   @include mobile-padding;
   padding-bottom: $pixel-40;
+  @include tablet {
+    @include tablet-padding;
+  }
   &__image {
     padding-bottom: $pixel-16;
+    @include tablet {
+      display: inline-flex;
+      flex-wrap: wrap;
+      margin-right: 0px;
+      width: 32%;
+      height: 32%;
+    }
+  }
+}
+
+.gallery-colummn {
+  // flex-grow: (1 0 30%);
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // align-content: center;
+    // margin-right: 0px;
   }
 }
 
@@ -250,23 +274,27 @@ ul {
   background-color: $black;
   color: $white;
   @include mobile-padding;
+  font-family: "AvenirBold";
+  font-size: 0.8em;
 }
 
 .booking__heading-4 {
   font-family: "AvenirRegular";
-  font-size: 14px;
   line-height: 20px;
-  font-weight: bolder;
 }
 
 .footer-logo {
   display: none;
+  @include tablet {
+    display: flex;
+  }
 }
 
 .social {
   &__list {
     display: flex;
     padding-bottom: $pixel-24;
+    align-items: center;
   }
 }
 
@@ -275,13 +303,19 @@ ul {
 }
 
 .social-menu {
-  width: 30px;
+  width: 12%;
+  margin-right: 35px;
+  @include tablet {
+    width: 7%;
+  }
 }
 
 .social-menu-fb {
-  width: 20px;
+  width: 7%;
+  box-sizing: content-box;
 }
 
+//1. fix footer, fix nav mobile
 .booking {
   &__text {
     padding-top: $pixel-24;
@@ -292,70 +326,30 @@ ul {
 }
 
 .booking-copyright {
-  width: 90%;
+  width: 70%;
   padding-top: $pixel-24;
 }
 
-// //TABLET
-// @include tablet {
-//   .header {
-//     display: flex;
-//     flex-direction: row;
-//     width: 100%;
-//     // margin: 0;
-//     // padding: 0;
-//     height: 80px;
-//     @include tablet-padding;
-//   }
+@include tablet {
+  .footer-nav-bar {
+    display: flex;
+  }
+}
+.footer {
+  &__column {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-right: 0px;
+    }
+  }
+}
 
-//   .header-logo {
-//     height: 20px;
-//     width: 20%;
-//   }
-//   .header-nav {
-//     display: flex;
-//     width: 80%;
-//   }
-
-//   .header {
-//     &__list {
-//       display: flex;
-//       width: 100%;
-//     }
-//     &__link {
-//       display: flex;
-//     }
-//     &__list {
-//       display: flex;
-//       padding-left: 20px;
-//     }
-//     &__item {
-//       box-sizing: content-box;
-//       padding-right: 20px;
-//       padding-bottom: 0px;
-//       padding-top: 35px;
-//       margin-right: 40px;
-//       &--active {
-//         border-bottom: solid 5px $white;
-//         padding-right: inherit;
-//         width: auto;
-//       }
-//     }
-//   }
-//   .hero {
-//     height: 70vw;
-//   }
-//   .hero-title {
-//     font-size: 4em;
-//     width: 90%;
-//   }
-// }
-
-// //DESKTOP
-// @include desktop {
-//   .header {
-//   }
-//   .hero {
-//     min-height: 670px;
-//   }
-// }
+@include tablet {
+  .booking-column {
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding-right: 0px;
+  }
+}
