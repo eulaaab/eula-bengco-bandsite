@@ -11,3 +11,18 @@
     @content;
   }
 }
+
+@mixin mobile-padding {
+  padding-left: $pixel-16;
+  padding-right: $pixel-16;
+}
+
+@mixin tablet-padding {
+  padding-left: $pixel-24;
+  padding-right: $pixel-24;
+}
+
+@mixin reset-margin {
+  padding: 0px;
+  margin: 0px;
+}

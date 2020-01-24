@@ -1,15 +1,16 @@
-// *,
-// *::before,
-// *::after {
-//   box-sizing: border-box;
-// }
-
-@charset 'utf-8';
+// EULA BENGCO SCSS FILE
 
 @import "./partials/fonts";
 @import "./partials/colors";
 @import "./partials/variables";
 @import "./partials/mixins";
+
+// so that the border, padding, and margin takes up the width set on the screen
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 //remove browser's margin, and padding settings, text global font is $black
 *,
@@ -34,36 +35,51 @@ ul {
   display: flex;
   background-color: $black;
   width: auto;
-  flex-grow: 1;
-}
-
-.header__link,
-.header__link:hover,
-.header__link:visited {
-  font-family: "AvenirRegular", sans-serif;
-  color: $white;
-}
-
-.header {
   justify-content: center;
   flex-direction: column;
-  display: flex;
+  width: auto;
   height: 80px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  @include tablet {
+    flex-direction: row;
+    // @include reset-margin;
+    justify-content: left;
+    align-content: flex-start;
+  }
 }
 
 .header-logo {
+  box-sizing: content-box;
   display: flex;
-  // margin: 0px auto;
+  margin: 0px auto;
   align-self: center;
-  // padding-bottom: $padding-16;
-  height: 24px;
+  height: 20px;
+  padding-top: 10px;
+  @include tablet {
+    display: flex;
+    width: 20%;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
 }
 
 .header-nav {
   display: flex;
   width: 100%;
   margin-top: 0px;
-  overflow-x: auto;
+  @include tablet {
+    width: 70%;
+    margin-left: 0px;
+  }
+  // overflow-x: auto;
+}
+
+.header__link,
+.header__link:hover,
+.header__link:visited {
+  color: white;
 }
 
 .header {
@@ -71,16 +87,35 @@ ul {
     display: flex;
     align-content: center;
     justify-content: space-evenly;
+    margin-top: 0px;
+    @include tablet {
+      padding-left: 20px;
+      padding-top: 20px;
+    }
   }
   &__item {
+    box-sizing: content-box;
     display: flex;
     width: 50%;
-    min-width: 160px;
     text-align: center;
-    padding-bottom: 18px;
+    padding-bottom: 40px;
     margin-bottom: 0px;
+    padding-top: $pixel-16;
+    @include tablet {
+      box-sizing: content-box;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      padding-top: 15px;
+      margin-right: 40px;
+      width: 40%;
+    }
     &--active {
-      border-bottom: solid 5px $white;
+      // border-bottom: solid 5px $white;
+      @include tablet {
+        // border-bottom: solid 5px $white;
+        // padding-right: inherit;
+        // width: max-content;
+      }
     }
   }
 }
@@ -88,59 +123,133 @@ ul {
 //HERO SECTION
 .hero {
   background-image: url("./assets/Images/Hero-image.jpg");
-  transition: transform 0.5s ease;
-  // height: 183px;
-  // width: 100vw;
+  // transition: transform 0.5s ease;
+  display: flex;
+  min-height: 183px;
+  width: 100%;
+  height: 60vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include tablet {
+    height: 70vw;
+  }
 }
 
 .hero-title {
+  display: flexbox;
   font-family: "AvenirBold";
-  font-size: 60px;
-  line-height: 68px;
+  // font-size: 60px;
+  // line-height: 68px;
   color: $white;
+  @include mobile-padding;
+  align-items: center;
+  width: 70%;
+  font-size: 1.4rem;
+  align-self: center;
+
+  @include tablet {
+    font-size: 4em;
+    width: 85%;
+    @include tablet-padding;
+  }
 }
 
-//ABOUT SECTION
 .about {
   color: $black;
+  @include mobile-padding;
+  @include tablet {
+    @include tablet-padding;
+  }
 }
+
 .heading-2 {
   font-family: "AvenirBold";
-  font-size: 30px;
+  font-size: 1.4rem;
   line-height: 32px;
+  margin-top: $pixel-32;
+  margin-bottom: $pixel-24;
+  @include tablet {
+    font-size: 1.8em;
+  }
 }
 
 .about-image {
+  display: flex;
 }
 
 .about-tagline {
   font-family: "AvenirMedium";
-  font-size: 16px;
+  font-size: 1.4rem;
   line-height: 22px;
+  margin-top: $pixel-24;
+  margin-bottom: $pixel-32;
+  @include tablet {
+    font-family: "AvenirBold";
+    box-sizing: content-box;
+    font-weight: 100;
+    font-size: 1.4em;
+    line-height: 32px;
+    height: max-content;
+    width: 90%;
+  }
 }
 
 .heading-3 {
   font-family: "AvenirBold";
-  font-size: 18px;
+  font-size: 1.4rem;
   line-height: 24px;
+  @include tablet {
+    font-size: 1.3em;
+  }
 }
 
 .about-tagline-author {
   font-family: "AvenirBold";
   font-size: 12px;
   line-height: 22px;
+  margin-bottom: $pixel-40;
+}
+
+.about-story {
+  @include tablet {
+    display: flex;
+  }
+
+  &__text {
+    margin-top: $pixel-24;
+    margin-right: 0px;
+    line-height: 22px;
+    @include tablet {
+      display: flex;
+      width: 50%;
+      flex-direction: row;
+      font-size: 0.89em;
+    }
+  }
+  &__text-2 {
+    margin-bottom: $pixel-40;
+    @include tablet {
+      display: flex;
+      margin-left: 24px;
+    }
+  }
 }
 
 .gallery {
   background-color: $alabaster;
+  @include mobile-padding;
+  padding-bottom: $pixel-40;
+  &__image {
+    padding-bottom: $pixel-16;
+  }
 }
-
-//PHOTO GALLERY
 
 //FOOTER SECTION
 .footer {
   background-color: $black;
   color: $white;
+  @include mobile-padding;
 }
 
 .booking__heading-4 {
@@ -150,222 +259,103 @@ ul {
   font-weight: bolder;
 }
 
+.footer-logo {
+  display: none;
+}
+
+.social {
+  &__list {
+    display: flex;
+    padding-bottom: $pixel-24;
+  }
+}
+
+.social-link {
+  width: inherit;
+}
+
+.social-menu {
+  width: 30px;
+}
+
+.social-menu-fb {
+  width: 20px;
+}
+
 .booking {
   &__text {
-    // font-family: "AvenirLight";
-    // font-size: 12px;
-    // line-height: 20px;
+    padding-top: $pixel-24;
     &--bold {
-      // font-family: "AvenirBold";
-      // font-size: 12px;
-      // line-height: 20px;
+      font-family: "AvenirDemi";
     }
   }
 }
 
-//MOBILE
-@media screen and (max-width: 768px) {
-  .header {
-    justify-content: center;
-    flex-direction: column;
-    display: flex;
-    width: auto;
-    margin: 0;
-    padding: 0;
-  }
-  .header-logo {
-    display: flex;
-    // margin: 0px auto;
-    align-self: center;
-    padding-bottom: $padding-16;
-    height: 7.5vw;
-    padding-top: 8px;
-    padding-bottom: 14px;
-  }
-  .header-nav {
-    display: flex;
-    width: 100%;
-    margin-top: 0px;
-    overflow: hidden;
-  }
-  .header {
-    &__list {
-      display: flex;
-      align-content: center;
-      justify-content: space-evenly;
-    }
-    &__item {
-      display: flex;
-      width: 50%;
-      min-width: 160px;
-      text-align: center;
-      padding-bottom: 8px;
-      margin-top: 0px;
-      margin-bottom: 0px;
-      font-size: 1em;
-      &--active {
-        font-weight: 400;
-        border-bottom: solid 5px $white;
-      }
-    }
-  }
-  //HERO SECTION
-  .hero {
-    display: flex;
-    height: 183px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-items: center;
-    padding: 0px $padding-16;
-  }
-  .hero-title {
-    display: inline-block;
-    font-size: 24px;
-    line-height: 32px;
-    color: $white;
-    width: 202px;
-  }
-  .heading-2 {
-    padding-top: $padding-32;
-    margin-bottom: $padding-24;
-    font-size: 24px;
-  }
-
-  .about {
-    padding: 0 $padding-16;
-    height: 100%;
-  }
-
-  .about-image {
-    width: 288px;
-    margin-top: 0px;
-    margin-bottom: 24px;
-  }
-  .about-tagline {
-    display: flex;
-    font-family: "AvenirRegular";
-    padding-right: 32px;
-    line-height: 20px;
-    width: auto;
-  }
-  .about-tagline-author {
-    display: flex;
-    padding-top: $padding-32;
-    margin-right: $padding-16;
-    // padding-bottom: $padding-40;
-    font-family: "AvenirRegular";
-  }
-
-  .about-story {
-    margin-right: $padding-16;
-    width: 100%;
-    &__text {
-      font-size: 14px;
-      line-height: 20px;
-      padding-right: 16px;
-    }
-  }
-
-  .gallery-column {
-    padding-right: 16px;
-  }
-  .gallery {
-    padding: 0px $padding-16;
-    &__image {
-      padding-bottom: $padding-16;
-
-      min-width: 288px;
-    }
-  }
-  .footer {
-    display: flex;
-    padding-left: $padding-16;
-  }
-
-  .social {
-    &__list {
-      display: flex;
-      max-height: 40px;
-    }
-  }
-  .social-menu {
-    height: auto;
-    width: 40px;
-    display: flex;
-  }
-  .social-menu-fb {
-  }
-
-  .footer-logo {
-    visibility: hidden;
-  }
-  .booking {
-    &__heading-4 {
-      display: flex;
-    }
-    &__text {
-      display: flex;
-      padding-top: $padding-16;
-      &--bold {
-        // font-size: 12px;
-        line-height: 20px;
-        font-weight: 300;
-      }
-    }
-  }
-  .booking-copyright {
-    width: 65%;
-    padding-top: $padding-40;
-    padding-bottom: $padding-40;
-  }
+.booking-copyright {
+  width: 90%;
+  padding-top: $pixel-24;
 }
 
-//TABLET
-@include tablet {
-  html {
-    padding: 0px;
-    margin-right: 0px;
-    display: flex;
-  }
-  .header {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    height: 80px;
-  }
-  .header-logo {
-    display: flex;
-    height: 20px;
-    width: 20%;
-    margin-right: 0px;
-    margin-left: 0px;
-  }
-  .header-nav {
-    display: flex;
-    width: 80%;
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .header {
-    &__list {
-      width: 40%;
-    }
-    &__link {
-      width: 50px;
-    }
-  }
-  .hero {
-    height: 400px;
-  }
-}
+// //TABLET
+// @include tablet {
+//   .header {
+//     display: flex;
+//     flex-direction: row;
+//     width: 100%;
+//     // margin: 0;
+//     // padding: 0;
+//     height: 80px;
+//     @include tablet-padding;
+//   }
 
-//DESKTOP
-@include desktop {
-  .header {
-  }
-  .hero {
-    min-height: 670px;
-  }
-}
+//   .header-logo {
+//     height: 20px;
+//     width: 20%;
+//   }
+//   .header-nav {
+//     display: flex;
+//     width: 80%;
+//   }
+
+//   .header {
+//     &__list {
+//       display: flex;
+//       width: 100%;
+//     }
+//     &__link {
+//       display: flex;
+//     }
+//     &__list {
+//       display: flex;
+//       padding-left: 20px;
+//     }
+//     &__item {
+//       box-sizing: content-box;
+//       padding-right: 20px;
+//       padding-bottom: 0px;
+//       padding-top: 35px;
+//       margin-right: 40px;
+//       &--active {
+//         border-bottom: solid 5px $white;
+//         padding-right: inherit;
+//         width: auto;
+//       }
+//     }
+//   }
+//   .hero {
+//     height: 70vw;
+//   }
+//   .hero-title {
+//     font-size: 4em;
+//     width: 90%;
+//   }
+// }
+
+// //DESKTOP
+// @include desktop {
+//   .header {
+//   }
+//   .hero {
+//     min-height: 670px;
+//   }
+// }
