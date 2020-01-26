@@ -194,15 +194,21 @@ ul {
   min-height: 183px;
   width: 100%;
   height: 60vw;
-  background-color: rgba(0, 0, 0, 0.5);
   align-items: center;
+  position: relative;
   @include tablet {
     height: 70vw;
   }
   @include desktop {
-    position: relative;
     height: 70vw;
     top: 80px;
+  }
+  &__overlay {
+    position: absolute;
+    background-color: $black;
+    opacity: 0.5;
+    width: inherit;
+    height: inherit;
   }
 }
 
@@ -210,13 +216,14 @@ ul {
   display: flexbox;
   font-family: "AvenirBold";
   color: $white;
+  position: relative;
+  order: 2;
   @include mobile-padding;
   align-items: center;
   width: 70%;
   font-size: 1.4rem;
   align-self: center;
   position: relative;
-  z-index: 2;
   @include tablet {
     font-size: 4.2rem;
     width: 85%;
@@ -368,6 +375,7 @@ ul {
     margin-bottom: $pixel-24;
     position: relative;
     top: 80px;
+    margin-bottom: 0px;
   }
   &__image {
     padding-bottom: $pixel-16;
