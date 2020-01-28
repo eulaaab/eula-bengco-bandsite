@@ -1,0 +1,263 @@
+// EULA BENGCO BIOGRAPHY FILE
+
+@import "../partials/fonts";
+@import "../partials/colors";
+@import "../partials/variables";
+@import "../partials/mixins";
+
+//HERO SECTION
+.hero {
+  background-image: url("../assets/Images/Hero-image.jpg");
+}
+.hero-title {
+  display: flexbox;
+  font-family: "AvenirBold";
+  color: $white;
+  position: relative;
+  order: 2;
+  @include mobile-padding;
+  align-items: center;
+  width: 70%;
+  font-size: 1.4rem;
+  align-self: center;
+  position: relative;
+  @include tablet {
+    font-size: 4.2rem;
+    width: 85%;
+    padding-left: $margin-tablet;
+  }
+  @include desktop {
+    font-size: 4.6rem;
+    padding-left: $margin-desktop;
+    width: 75%;
+  }
+}
+// background-position: center;
+// background-repeat: no-repeat;
+// background-size: cover;
+// display: flex;
+// min-height: 183px;
+// width: 100%;
+// height: 60vw;
+// align-items: center;
+// position: relative;
+// @include tablet {
+//   height: 70vw;
+// }
+// @include desktop {
+//   height: 70vw;
+//   top: 80px;
+// }
+// &__overlay {
+//   position: absolute;
+//   background-color: $black;
+//   opacity: 0.5;
+//   width: inherit;
+//   height: inherit;
+// }
+
+// .hero-title {
+//   display: flexbox;
+//   font-family: "AvenirBold";
+//   color: $white;
+//   position: relative;
+//   order: 2;
+//   @include mobile-padding;
+//   align-items: center;
+//   width: 70%;
+//   font-size: 1.4rem;
+//   align-self: center;
+//   position: relative;
+//   @include tablet {
+//     font-size: 4.2rem;
+//     width: 85%;
+//     padding-left: $margin-tablet;
+//   }
+//   @include desktop {
+//     font-size: 4.6rem;
+//     padding-left: $margin-desktop;
+//     width: 75%;
+//   }
+// }
+
+.about {
+  color: $black;
+  @include mobile-padding;
+  background-color: $white;
+  position: relative;
+
+  @include tablet {
+    padding-left: $margin-tablet;
+    padding-right: $margin-tablet;
+  }
+  @include desktop {
+    top: 80px;
+    padding-left: $margin-desktop;
+    padding-right: $margin-desktop;
+  }
+}
+
+// .heading-2 {
+//   font-family: "AvenirBold";
+//   font-size: 1.4rem;
+//   line-height: 32px;
+//   margin-top: $pixel-32;
+//   margin-bottom: $pixel-24;
+//   position: relative;
+
+//   @include tablet {
+//     font-size: 1.6rem;
+//   }
+//   @include desktop {
+//     font-size: 2rem;
+//     padding-top: 20px;
+//     padding-bottom: 20px;
+//   }
+// }
+
+.about-image {
+  display: flex;
+  position: relative;
+  @include desktop {
+    margin-left: $pixel-56;
+    margin-right: $pixel-56;
+    max-width: 95%;
+  }
+}
+
+.about-tagline {
+  font-family: "AvenirMedium";
+  font-size: 1.35rem;
+  line-height: 20px;
+  margin-top: $pixel-24;
+  margin-bottom: $pixel-32;
+  @include tablet {
+    font-family: "AvenirBold";
+    box-sizing: content-box;
+    font-weight: 100;
+    font-size: 1.4rem;
+    line-height: 32px;
+    height: max-content;
+    width: 90%;
+  }
+  @include desktop {
+    padding-left: $pixel-56;
+    width: 80%;
+  }
+}
+
+//Used by the story header
+.heading-3 {
+  font-family: "AvenirDemi";
+  font-size: 1.08rem;
+  line-height: 24px;
+  @include tablet {
+    font-size: 1.3rem;
+  }
+  @include desktop {
+    padding-left: $pixel-56;
+    font-size: 1.9rem;
+    padding-top: $pixel-24;
+    padding-bottom: $pixel-16;
+  }
+}
+
+.about-tagline-author {
+  font-family: "AvenirBold";
+  font-size: 12px;
+  line-height: 22px;
+  margin-bottom: $pixel-40;
+  @include desktop {
+    padding-left: $pixel-56;
+    font-size: 1.2rem;
+  }
+}
+
+.about-story {
+  @include tablet {
+    display: flex;
+  }
+  &__text {
+    font-size: "AvenirUltraThin";
+    margin-top: $pixel-24;
+    margin-right: 0px;
+    line-height: 22px;
+    font-size: 0.83rem;
+    @include tablet {
+      display: flex;
+      width: 50%;
+      flex-direction: row;
+      font-size: 0.89rem;
+    }
+    @include desktop {
+      padding-left: $pixel-56;
+      padding-bottom: 0px;
+    }
+  }
+  &__text-2 {
+    margin-bottom: $pixel-40;
+    @include tablet {
+      display: flex;
+      margin-left: 24px;
+    }
+  }
+}
+
+.gallery {
+  background-color: $alabaster;
+  @include mobile-padding;
+  padding-bottom: $pixel-40;
+  @include tablet {
+    padding-left: $margin-tablet;
+    padding-right: $margin-tablet;
+  }
+  @include desktop {
+    padding-top: $pixel-24;
+    padding-left: $margin-desktop;
+    padding-right: $margin-desktop;
+    margin-bottom: $pixel-24;
+    position: relative;
+    top: 80px;
+    margin-bottom: 0px;
+  }
+  &__image {
+    padding-bottom: $pixel-16;
+    @media screen and (min-width: 600px) and (max-width: 768px) {
+      display: inline-flex;
+      // flex-wrap: wrap;
+      flex-flow: row wrap;
+      width: 45%;
+      height: 45%;
+    }
+    @include tablet {
+      display: inline-flex;
+      flex-wrap: wrap;
+      margin-right: 0px;
+      padding-bottom: $pixel-24;
+      width: 32%;
+      height: 32%;
+    }
+
+    @include desktop {
+      margin-right: 0px;
+      padding-right: 0px;
+    }
+    &:hover {
+      filter: grayscale(30%);
+    }
+  }
+}
+
+.gallery-colummn {
+  // flex-grow: (1 0 30%);
+  @media screen and (min-width: 600px) and (max-width: 768px) {
+    text-align: center;
+  }
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // align-content: center;
+    // margin-right: 0px;
+  }
+}

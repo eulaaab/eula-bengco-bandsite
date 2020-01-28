@@ -1,0 +1,83 @@
+@import "./partials/fonts";
+@import "./partials/colors";
+@import "./partials/variables";
+@import "./partials/mixins";
+
+.hero {
+  background-image: url("../assets/Images/Show-image.jpg");
+  min-height: 472px;
+  flex-direction: column;
+  @include mobile-padding;
+}
+
+.hero {
+  &__text {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding-top: $pixel-64;
+    padding-bottom: $pixel-64;
+  }
+}
+
+.hero-tagline {
+  display: flex;
+  font-family: "AvenirRegular";
+  color: $white;
+  position: relative;
+  order: 2;
+  padding-bottom: 8px;
+  // align-items: center;
+  // width: 70%;
+  // font-size: 0.9rem;
+  // align-self: center;
+  // padding-top: $pixel-64;
+  // @include tablet {
+  //   font-size: 4.2rem;
+  //   width: 85%;
+  //   padding-left: $margin-tablet;
+  // }
+  // @include desktop {
+  //   font-size: 4.6rem;
+  //   padding-left: $margin-desktop;
+  //   width: 75%;
+  // }
+}
+
+.hero-title {
+  display: flexbox;
+  font-family: "AvenirBold";
+  color: $white;
+  position: relative;
+  order: 2;
+  padding-right: 0px;
+  padding-left: 0px;
+  align-items: left;
+  align-self: left;
+  width: 95%;
+}
+
+.hero-music {
+  display: flex;
+  position: relative;
+  // background-color: blue;
+  // width: 288px;
+  width: 100%;
+  height: 145px;
+  // desktop
+  // width: 436px;
+  // height: 146px;
+}
+
+.cookiePolicy.sc-background-light,
+#aria-hidden {
+  display: none;
+}
+
+.compactSound.g-box-full.g-background-default.state-medium {
+  width: 90%;
+}
+
+// .widget {
+//   height: 90%;
+// }
