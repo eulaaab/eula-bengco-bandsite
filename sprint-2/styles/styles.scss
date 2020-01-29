@@ -214,6 +214,19 @@ ul {
   }
 }
 
+// BUTTON LAYOUT
+.button {
+  color: $white;
+  background-color: $black;
+  height: 48px;
+  width: 288px;
+  margin-bottom: $pixel-16;
+  font-family: "AvenirLight";
+  font-size: 1.2rem;
+  line-height: 18px;
+  border-radius: 4px;
+}
+
 .heading-2 {
   font-family: "AvenirBold";
   font-size: 1.4rem;

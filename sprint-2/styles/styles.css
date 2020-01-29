@@ -339,6 +339,18 @@ ul li {
   height: inherit;
 }
 
+.button {
+  color: #ffffff;
+  background-color: #323232;
+  height: 48px;
+  width: 288px;
+  margin-bottom: 16px;
+  font-family: "AvenirLight";
+  font-size: 1.2rem;
+  line-height: 18px;
+  border-radius: 4px;
+}
+
 .heading-2 {
   font-family: "AvenirBold";
   font-size: 1.4rem;
