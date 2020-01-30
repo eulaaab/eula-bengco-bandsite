@@ -132,13 +132,9 @@
 .hero-music {
   display: flex;
   position: relative;
-  // background-color: blue;
-  // width: 288px;
   width: 100%;
   height: 27%;
-  // desktop
-  // width: 436px;
-  // height: 146px;
+
   @include tablet {
     display: flex;
     align-self: flex-start;
@@ -173,6 +169,7 @@
   @include tablet {
     display: flex;
     flex-direction: column;
+    height: 800px;
   }
   @include desktop {
     display: flex;
