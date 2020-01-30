@@ -203,7 +203,7 @@ ul li {
 @media screen and (min-width: 768px) {
   .header__list {
     padding-left: 0px;
-    padding-top: 20px;
+    margin-top: 20px;
     margin-left: 0px;
     -webkit-box-pack: left;
         -ms-flex-pack: left;
@@ -218,6 +218,7 @@ ul li {
             justify-content: left;
     padding-left: 0px;
     padding-top: 0px;
+    margin-top: 0px;
   }
 }
 
@@ -263,45 +264,6 @@ ul li {
   color: lightcoral;
 }
 
-.header__link--active {
-  color: white;
-  border-bottom: solid 5px #ffffff;
-  padding-bottom: 13px;
-  overflow-x: hidden;
-}
-
-@media screen and (min-width: 768px) {
-  .header__link--active {
-    padding-bottom: 23px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .header__link--active {
-    width: 85px;
-    padding-bottom: 0px;
-  }
-}
-
-.header__link--normal {
-  border-bottom: solid 5px transparent;
-  padding-bottom: 11px;
-  color: #afafaf;
-}
-
-@media screen and (min-width: 768px) {
-  .header__link--normal {
-    margin-left: 80px;
-    padding-bottom: 23px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .header__link--normal {
-    margin-left: 0px;
-  }
-}
-
 .hero {
   background-position: center;
   background-repeat: no-repeat;
@@ -335,8 +297,8 @@ ul li {
   position: absolute;
   background-color: #323232;
   opacity: 0.5;
-  width: inherit;
-  height: inherit;
+  width: 100%;
+  height: 100%;
 }
 
 .button {
@@ -349,6 +311,18 @@ ul li {
   font-size: 1.2rem;
   line-height: 18px;
   border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .button {
+    place-content: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-size: 1rem;
+    font-family: "AvenirRegular";
+    margin-bottom: 0px;
+  }
 }
 
 .heading-2 {

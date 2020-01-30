@@ -114,16 +114,19 @@ ul {
     justify-content: space-evenly;
     font-size: 17px;
     margin-top: 0px;
+
     @include tablet {
       padding-left: 0px;
-      padding-top: 20px;
+      margin-top: 20px;
       margin-left: 0px;
       justify-content: left;
     }
+
     @include desktop {
       justify-content: left;
       padding-left: 0px;
       padding-top: 0px;
+      margin-top: 0px;
     }
   }
   &__item {
@@ -158,31 +161,6 @@ ul {
     &:hover {
       color: lightcoral;
     }
-    &--active {
-      color: white;
-      border-bottom: solid 5px $white;
-      padding-bottom: 13px;
-      overflow-x: hidden;
-      @include tablet {
-        padding-bottom: 23px;
-      }
-      @include desktop {
-        width: 85px;
-        padding-bottom: 0px;
-      }
-    }
-    &--normal {
-      border-bottom: solid 5px transparent;
-      padding-bottom: 11px;
-      color: $silver;
-      @include tablet {
-        margin-left: 80px;
-        padding-bottom: 23px;
-      }
-      @include desktop {
-        margin-left: 0px;
-      }
-    }
   }
 }
 
@@ -209,8 +187,8 @@ ul {
     position: absolute;
     background-color: $black;
     opacity: 0.5;
-    width: inherit;
-    height: inherit;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -225,6 +203,13 @@ ul {
   font-size: 1.2rem;
   line-height: 18px;
   border-radius: 4px;
+  @include tablet {
+    place-content: center;
+    align-self: center;
+    font-size: 1rem;
+    font-family: "AvenirRegular";
+    margin-bottom: 0px;
+  }
 }
 
 .heading-2 {
