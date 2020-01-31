@@ -304,13 +304,13 @@
   }
 }
 
-.shows-container {
+.parentHeader {
   position: relative;
   border-bottom: 2px #e1e1e1 solid;
 }
 
 @media screen and (min-width: 768px) {
-  .shows-container {
+  .parentHeader {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -318,7 +318,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .shows-container {
+  .parentHeader {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

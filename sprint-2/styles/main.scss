@@ -113,7 +113,8 @@
 }
 
 //Used by the story header
-.heading-3 {
+.heading-3,
+.comment__container {
   font-family: "AvenirDemi";
   font-size: 1.08rem;
   line-height: 24px;
@@ -126,6 +127,10 @@
     padding-top: $pixel-24;
     padding-bottom: $pixel-16;
   }
+}
+
+.comment__container {
+  height: 200px;
 }
 
 .about-tagline-author {

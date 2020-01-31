@@ -1,4 +1,4 @@
-let showObj = [
+const showObj = [
   {
     date: "Mon Dec 17 2018",
     venue: "Ronald Lane",
@@ -31,22 +31,9 @@ let showObj = [
   }
 ];
 
-// var parent = document.querySelector([".tableContent"]);
-// var showsContainer = document.createElement("h5");
-// showsHeader.classList.add("dateHeader");
-// parent.appendChild(showsHeader);
-// showsHeader.innerText = "DATE";
-// var showsContainer = document.createElement("div");
-// showsContainer.classList.add("showDate");
-// parent.appendChild(showsContainer);
-
-// var parent = document.querySelector([".tableContent"]);
-// var showsContainer = document.createElement("div");
-// showsContainer.classList.add("showDate");
-// parent.appendChild(showsContainer);
-
 //this appends on the created Element dateHeader
 let parentHeader = document.querySelector([".shows__table--tablet"]);
+let tableHeader = document.createElement("div");
 
 // make the h5 element
 let datesHeader = document.createElement("h5");
@@ -56,43 +43,63 @@ datesHeader.classList.add("tableHeader");
 parentHeader.appendChild(datesHeader);
 //created the text in that h5 you made
 datesHeader.innerText = "DATES";
+datesHeader.classList.add("shows__title");
 
 let venueHeader = document.createElement("h5");
 venueHeader.classList.add("tableHeader");
 parentHeader.appendChild(venueHeader);
 venueHeader.innerText = "VENUE";
+// venueHeader.classList.add("tableHeader");
+venueHeader.classList.add("shows__title");
 
 let locationHeader = document.createElement("h5");
 locationHeader.classList.add("tableHeader");
 parentHeader.appendChild(locationHeader);
 locationHeader.innerText = "LOCATION";
+locationHeader.classList.add("shows__title");
+// tableHeader.appendChild([".shows__title"]);
 
-// var parent = document.querySelector([".tableContent"]);
-// var showsContainer = document.createElement("div");
-// showsContainer.classList.add("showDate");
-// parent.appendChild(showsContainer);
+//CREATE PARENT CONTAINER FROM JS
 
-for (i = 0; i < showObj[i].date[i].length; i++) {}
-
+// const showsTable = showObj => {
 // //grabs the parent container
-let parentContainer = document.querySelector([".shows__table--tablet"]);
+let parentContainerTwo = document.querySelector([".shows__table"]);
 
-//makes a variable and creats the element div inside the parent container
-let showsContainer = document.createElement("div");
-//the variable shows container get than and put a class in there showDate
-showsContainer.classList.add("showDate");
-//grab the parent container and that's where you are going to put the new element you created
-parentContainer.appendChild(showsContainer);
+// // const showsRow = showsTable(Object.keys(obj)) => {
+for (i = 0; i < showObj.length; i++) {
+  let headingTest = document.createElement("div");
+  headingTest.classList.add("test");
+  document.querySelectorAll(".test");
+  let eula = Object.keys(showObj[i]);
+  headingTest.innerText = eula[i];
 
-let x = (document.querySelector([".showDate"]).innerText = showObj[i].date);
-console.log(x);
-//"Mon Dec 17 2018";
+  // //makes a variable and creats the element div inside the parent container
+  let showsContainer = document.createElement("div");
+  // //the variable shows container get than and put a class in there showDate
+  showsContainer.classList.add("show__date");
+  // //grab the parent container and that's where you are going to put the new element you created
+  parentContainerTwo.appendChild(showsContainer);
+  parentContainerTwo.appendChild(headingTest);
+  document.querySelectorAll(".show__date")[i].innerText = showObj[i].date;
+  let x = (document.querySelectorAll(".show__date")[i].innerText =
+    showObj[i].date);
+  console.log(x);
 
-// let parentContainerTwo = document.querySelector([".shows__table--tablet"]);
-let showsContainerTwo = document.createElement("div");
-showsContainerTwo.classList.add("showVenue");
-//grab the parent container and that's where you are going to put the new element you created
-parentContainer.appendChild(showsContainerTwo);
+  let showsContainerTwo = document.createElement("div");
+  showsContainerTwo.classList.add("show__venue");
+  parentContainerTwo.appendChild(showsContainerTwo);
+  let y = (document.querySelectorAll(".show__venue")[i].innerText =
+    showObj[i].venue);
+  console.log(y);
 
-let y = (document.querySelector([".showVenue"]).innerText = showObj[i].venue);
-console.log(y);
+  let showsContainerThree = document.createElement("div");
+  showsContainerThree.classList.add("show__loc");
+  parentContainerTwo.appendChild(showsContainerThree);
+  let z = (document.querySelectorAll(".show__loc")[i].innerText =
+    showObj[i].location);
+}
+// }
+// }
+// console.log(x);
+// console.log(y);
+// console.log(z);

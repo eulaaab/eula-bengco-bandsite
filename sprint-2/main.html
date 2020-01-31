@@ -91,19 +91,25 @@
     <h2 class ="heading-2 comments-title">
       Join the Conversation
     </h2>
-    <form id ="comment-new" action="" method="POST">
+    <form id ="comment__form" action="" method="POST">
       <img class ="photo"/>
-      <label class="heading-5 comment-name">
+      <!-- <input type="hidden" name="date" value=""> -->
+      <label class="heading-5" name="comment-name" class ="clear__text">
         NAME
       </label>
-      <input type="text" name="full_name">
+      <input type="text" name="full_name" class="text">
+      </input>
       <label class="heading-5 comment">
         COMMENT
       </label>
-      <textarea type="text" name="comment" class =""></textarea>
+      <textarea type="text" name="comment" class="text-two"></textarea>
       <button type="submit" class="comment-submit">COMMENT</button>
     </div>
   </form>
+<div class ="comment__container">
+
+</div>
+  </section>
 
 
   <footer class ="footer">
@@ -187,6 +193,7 @@
       </p>
     </div>
   </footer>
+  <script src ="./js/main.js"></script>
 </body>
 
 </html>
