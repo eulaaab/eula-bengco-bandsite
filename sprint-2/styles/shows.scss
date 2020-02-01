@@ -151,15 +151,6 @@
   }
 }
 
-.cookiePolicy.sc-background-light,
-#aria-hidden {
-  display: none;
-}
-
-.compactSound.g-box-full.g-background-default.state-medium {
-  width: 90%;
-}
-
 //SHOWS LAYOUT
 .shows {
   position: relative;
@@ -170,6 +161,7 @@
     display: flex;
     flex-direction: column;
     height: 800px;
+    padding-right: $margin-tablet;
   }
   @include desktop {
     display: flex;
@@ -181,77 +173,29 @@
   }
 }
 
-.parentHeader {
-  position: relative;
-  border-bottom: 2px $mercury solid;
-  @include tablet {
-    display: flex;
-  }
-  @include desktop {
-    display: flex;
-    width: 80%;
-    justify-content: space-between;
-  }
-}
-
-//TABLE HEADERS
-.shows {
-  &__table {
-    @include desktop {
-      display: flex;
-    }
-    &--tablet {
-      display: none;
-      @include tablet {
-        display: flex;
-        align-content: flex-start;
-      }
-      @include desktop {
-        display: flex;
-      }
-    }
-  }
-}
-
-//TABLE HEADERS FOR MOBILE
-.shows {
-  &__table {
-    @include tablet {
-      display: flex;
-      flex-direction: column;
-    }
-    &--mobile {
-      @include tablet {
-        display: none;
-      }
-      @include desktop {
-        display: none;
-      }
-    }
-  }
-}
-
-.table-content {
-  @include tablet {
-    display: flex;
-    flex-direction: column;
-  }
-  @include desktop {
-    padding-right: $margin-desktop;
-  }
-}
-
 //SHOWS TEXT LAYOUT
 .shows {
+  @include tablet {
+    display: flex;
+    margin-right: $pixel-24;
+    margin-left: $pixel-24;
+  }
   &__heading {
     margin-top: 0px;
     margin-bottom: 40px;
     @include tablet {
       margin-bottom: 0px;
+      display: flex;
     }
     @include desktop {
       display: flex;
       width: 20vw;
+    }
+  }
+  &__table {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
     }
   }
   &__title {
@@ -261,17 +205,56 @@
     margin-bottom: $pixel-16;
     margin-top: $pixel-24;
     width: 187px;
-  }
-  &__item {
     @include tablet {
       display: flex;
-      width: 217px;
+      width: 177px;
     }
-    @include desktop {
-      display: flex;
+    &--mobile {
+      color: $silver;
+      font-size: 1.1rem;
+      line-height: 20px;
+      margin-bottom: $pixel-16;
+      margin-top: $pixel-24;
+      width: 187px;
+      @include tablet {
+        display: none;
+      }
+      @include desktop {
+        display: none;
+      }
+    }
+    &--non-mobile {
+      @include tablet {
+        display: flex;
+        padding-right: $pixel-16;
+      }
     }
   }
-  &__text {
+  &__wrapper {
+    margin-bottom: $pixel-16;
+    border-bottom: 2px $mercury solid;
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__header {
+    display: none;
+    @include tablet {
+      display: flex;
+      margin-right: 0px;
+    }
+  }
+  &__container {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      padding-right: 24px;
+    }
+  }
+
+  &__text,
+  &__text-2 {
     font-family: "AvenirLight";
     font-size: 1.2rem;
     line-height: 18px;
@@ -292,29 +275,28 @@
     }
   }
   &__button {
+    position: relative;
+    @include tablet {
+      padding-right: 0px;
+      text-align: right;
+    }
     @include desktop {
       height: 48px;
       width: 160px;
     }
   }
+  //positioning of texts
 }
 
-.shows {
-  &__ {
+.footer {
+  @include tablet {
+    position: relative;
     display: flex;
-    flex-direction: column;
   }
-}
-.shows {
-  &__table {
-    display: flex;
-    &active {
-      display: flex;
-    }
-    &--hide {
-      @include tablet {
-        display: none;
-      }
-    }
-  }
+  // @include desktop {
+  //   padding-left: $margin-desktop;
+  //   padding-right: $margin-desktop;
+  //   font-size: 1rem;
+  //   top: 80px;
+  // }
 }

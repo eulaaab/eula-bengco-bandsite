@@ -1,3 +1,4 @@
+// Eula Bengco MAIN JAVASCRIPT FILE
 let commentsObj = [
   {
     name: "Micheal Lyons",
@@ -23,23 +24,44 @@ let commentsObj = [
 let commentParent = document.querySelector([".comment__container"]);
 
 commentsObj.forEach(val => {
-  const commentContainer = document.createElement("div");
-  commentContainer.classList.add("comment__date");
-  commentContainer.innerText = val.date;
-  commentParent.appendChild(commentContainer);
+  let commentWrapper = document.createElement("div");
+  commentWrapper.classList.add("comment-wrapper");
+  commentParent.appendChild(commentWrapper);
 
-  console.log(val.date);
+  //LEFT SIDE
+  let commentDivLeft = document.createElement(["div"]);
+  commentDivLeft.classList.add("comment-left");
+  commentWrapper.appendChild(commentDivLeft);
 
-  let commentContainerTwo = document.createElement("div");
-  commentContainerTwo.classList.add("comment__name");
-  commentContainerTwo.innerText = val.name;
-  commentParent.appendChild(commentContainerTwo);
+  let commentPhoto = document.createElement("div");
+  commentPhoto.classList.add("photo");
+  commentDivLeft.appendChild(commentPhoto);
+
+  //RIGHT SIDE
+  let commentDivRight = document.createElement(["div"]);
+  commentDivRight.classList.add("comment-right");
+  commentWrapper.appendChild(commentDivRight);
+
+  let commentDivRightTop = document.createElement(["div"]);
+  commentDivRightTop.classList.add("comment-right-top");
+  commentDivRight.appendChild(commentDivRightTop);
+
+  let commentName = document.createElement("div");
+  commentName.classList.add("comment-full-name");
+  commentDivRightTop.appendChild(commentName);
+  commentName.innerText = val.name;
   console.log(val.name);
 
-  let commentContainerThree = document.createElement("div");
-  commentContainerThree.classList.add("comment__text");
-  commentContainerThree.innerText = val.text;
-  commentParent.appendChild(commentContainerThree);
+  let commentDate = document.createElement("div");
+  commentDate.classList.add("comment-date");
+  commentDivRightTop.appendChild(commentDate);
+  commentDate.innerText = val.date;
+  console.log(val.date);
+
+  let commentComment = document.createElement("div");
+  commentComment.classList.add("comment-comment");
+  commentComment.innerText = val.text;
+  commentDivRight.appendChild(commentComment);
   console.log(val.text);
 });
 
@@ -82,11 +104,11 @@ form.addEventListener("submit", displayComment => {
   document.querySelector(".text-two").value = "";
 
   commentsObj.forEach(val2 => {
-    let commentContainerTwo = document.createElement("div");
-    commentContainerTwo.classList.add("comment__name");
-    commentParent.appendChild(commentContainerTwo);
-    commentContainerTwo.innerText = val2.name;
-    console.log(commentContainerTwo);
+    let commentName = document.createElement("div");
+    commentName.classList.add("comment__name");
+    commentDivRightTop.appendChild(commentName);
+    commentName.innerText = val2.name;
+    console.log(commentName);
 
     console.log(displayComment.target.comment.value);
     let commentContainer = document.createElement("div");
@@ -103,6 +125,7 @@ form.addEventListener("submit", displayComment => {
 });
 
 //ANOTHER WAY OF FOREACH BUT FOUND THE EFFICIENT WAY ABOVE
+//I'm leaving this here for my own reference
 // const commentContainerTwo = document.createElement("div");
 // commentContainerTwo.classList.add("comment__name");
 // commentParent.appendChild(commentContainerTwo);

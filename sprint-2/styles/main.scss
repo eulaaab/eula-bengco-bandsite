@@ -1,9 +1,9 @@
 // EULA BENGCO BIOGRAPHY FILE
 
-@import "../partials/fonts";
-@import "../partials/colors";
-@import "../partials/variables";
-@import "../partials/mixins";
+@import "./partials/fonts";
+@import "./partials/colors";
+@import "./partials/variables";
+@import "./partials/mixins";
 
 .header {
   &__link {
@@ -14,11 +14,11 @@
       padding-bottom: 13px;
       overflow-x: hidden;
       @include tablet {
-        padding-bottom: 23px;
+        jlkjpadding-bottom: 23px;
       }
       @include desktop {
         width: 85px;
-        padding-bottom: 0px;
+        fdspadding-bottom: 0px;
       }
     }
     &--normal {
@@ -110,27 +110,6 @@
     padding-left: $pixel-56;
     width: 80%;
   }
-}
-
-//Used by the story header
-.heading-3,
-.comment__container {
-  font-family: "AvenirDemi";
-  font-size: 1.08rem;
-  line-height: 24px;
-  @include tablet {
-    font-size: 1.3rem;
-  }
-  @include desktop {
-    padding-left: $pixel-56;
-    font-size: 1.9rem;
-    padding-top: $pixel-24;
-    padding-bottom: $pixel-16;
-  }
-}
-
-.comment__container {
-  height: 200px;
 }
 
 .about-tagline-author {
@@ -231,4 +210,108 @@
     // align-content: center;
     // margin-right: 0px;
   }
+}
+
+//COMMENTS SECTION
+//Used by the story header
+.comment-section {
+  margin-right: $pixel-16;
+  margin-left: $pixel-16;
+  @include tablet {
+    display: flex;
+    margin-right: $pixel-24;
+    margin-left: $pixel-24;
+  }
+}
+
+#comment {
+  &__form {
+    display: flex;
+    padding-right: $pixel-16;
+    border-bottom: 2px $mercury solid;
+  }
+}
+.heading-5,
+.comment-date {
+  color: $silver;
+  font-size: 1.1rem;
+  line-height: 20px;
+  font-family: "AvenirMedium";
+  margin-bottom: $pixel-16;
+  margin-top: $pixel-24;
+}
+
+.photo {
+  background-color: $mercury;
+  color: $mercury;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 0px solid $white;
+  margin-top: 60px;
+}
+
+.button,
+.comment-submit {
+  &:hover {
+    background-color: black;
+  }
+}
+.text,
+.text-two {
+  background-color: $alabaster;
+  height: 48px;
+  width: 224px;
+  margin-bottom: $pixel-16;
+  font-family: "AvenirLight";
+  font-size: 1rem;
+  line-height: 18px;
+  border-radius: 4px;
+}
+
+.text-two {
+  height: 144px;
+}
+
+.comment-wrapper {
+  display: flex;
+}
+
+.comment-left {
+  width: 20%;
+  margin-right: 0px;
+}
+.comment-right,
+.comment-name,
+.comment-comment {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-right {
+  width: 65%;
+  margin-left: $pixel-16;
+}
+
+.comment-right-top {
+  display: flex;
+}
+
+.comment-date,
+.comment-full-name {
+  width: 50%;
+}
+
+.comment-submit {
+  width: 224px;
+}
+
+//DEFAULT COMMENTS STYLE
+.comment-date {
+  color: $silver;
+  font-size: 1.1rem;
+  line-height: 20px;
+  font-family: "AvenirRegular";
+  margin-bottom: $pixel-16;
+  margin-top: $pixel-24;
 }
