@@ -65,18 +65,12 @@ commentsObj.forEach(val => {
   console.log(val.text);
 });
 
-// //taking the new comment and the page re-renders with the new comment
-// // Constructs a new comment object
-// // Pushes a new comment object to an array of comments
-// // Clears all comments from the page
-// // Re-renders to the page all comments from the comment array
-// // Clears the input fields after submitting a new comment
 let form = document.getElementById(["comment__form"]);
 
 form.addEventListener("submit", displayComment => {
   displayComment.preventDefault();
 
-  let newCommentName = displayComment.target.comment.value;
+  let newCommentName = displayComment.target.name.value;
   let newCommentText = displayComment.target.comment.value;
 
   //For the date
@@ -90,6 +84,7 @@ form.addEventListener("submit", displayComment => {
   console.log(newCommentDateDay);
 
   let date = displayComment.target.comment.value;
+  console.log(date);
 
   commentsObj.unshift({
     name: newCommentName,
@@ -104,23 +99,46 @@ form.addEventListener("submit", displayComment => {
   document.querySelector(".text-two").value = "";
 
   commentsObj.forEach(val2 => {
+    let commentWrapper = document.createElement("div");
+    commentWrapper.classList.add("comment-wrapper");
+    commentParent.appendChild(commentWrapper);
+
+    //LEFT SIDE
+    let commentDivLeft = document.createElement(["div"]);
+    commentDivLeft.classList.add("comment-left");
+    commentWrapper.appendChild(commentDivLeft);
+
+    let commentPhoto = document.createElement("div");
+    commentPhoto.classList.add("photo");
+    commentDivLeft.appendChild(commentPhoto);
+
+    //RIGHT SIDE
+    let commentDivRight = document.createElement(["div"]);
+    commentDivRight.classList.add("comment-right");
+    commentWrapper.appendChild(commentDivRight);
+
+    let commentDivRightTop = document.createElement(["div"]);
+    commentDivRightTop.classList.add("comment-right-top");
+    commentDivRight.appendChild(commentDivRightTop);
+
     let commentName = document.createElement("div");
-    commentName.classList.add("comment__name");
+    commentName.classList.add("comment-full-name");
     commentDivRightTop.appendChild(commentName);
     commentName.innerText = val2.name;
     console.log(commentName);
+    //displayComment.target.comment.value
 
-    console.log(displayComment.target.comment.value);
-    let commentContainer = document.createElement("div");
-    commentContainer.classList.add("comment__date");
-    commentContainer.innerText = val2.date;
-    commentParent.appendChild(commentContainer);
-    console.log(commentContainer);
+    let commentDate = document.createElement("div");
+    commentDate.classList.add("comment-date");
+    commentDivRightTop.appendChild(commentDate);
+    commentDate.innerText = val2.date;
+    console.log(commentDate);
 
-    let commentContainerThree = document.createElement("div");
-    commentContainerThree.classList.add("comment__text");
-    commentParent.appendChild(commentContainerThree);
-    commentContainerThree.innerText = val2.text;
+    let commentComment = document.createElement("div");
+    commentComment.classList.add("comment-comment");
+    commentDivRight.appendChild(commentComment);
+    commentComment.innerText = val2.text;
+    console.log(commentComment);
   });
 });
 

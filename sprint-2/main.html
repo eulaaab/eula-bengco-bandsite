@@ -91,30 +91,38 @@
     <h2 class ="heading-2 comments-title">
       Join the Conversation
     </h2>
+<div class ="comment-content">
+    <div class ="new-comment-wrapper">
     <form id ="comment__form" action="" method="POST">
-      <div class ="comment-wrapper">
-      <div class ="photo" alt="image"></div>
-     <div class ="comment-right">
+    
+      <div class ="new-photo" alt="image"></div>
+     <div class ="comment-right comment-right--non-mobile">
         <div class="comment-name">
-      <label class="heading-5" class ="clear__text">
+      <label class="heading-5" class ="text">
         NAME
       </label>
-      <input type="text" name="full_name" class="text">
-      </input>
+      <input type="text" name="name" class="text" placeholder="Enter you name">
+    </input>
     </div>
-    <div class="comment-comment"></div>
-      <label class="heading-5 comment">
+    <div class="comment-comment">
+      <label class="heading-5">
         COMMENT
       </label>
-      <textarea type="text" name="comment" class="text-two"></textarea>
-      <button type="submit" class="button comment-submit">COMMENT</button>
-      </div>
+      <textarea type="text" name="comment" class="text-two" placeholder="Add your comment"></textarea>
     </div>
+      <button type="submit" class="button 
+      comment-submit">COMMENT</button>
+  
     </div>
+  
 
   </form>
-<div class ="comment__container">
+    </div>
+<div class ="comment__container comment">
 
+</div>
+</div>
+  
 </div>
   </section>
 

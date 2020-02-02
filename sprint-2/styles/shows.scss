@@ -3,6 +3,20 @@
 @import "./partials/variables";
 @import "./partials/mixins";
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "AvenirRegular", sans-serif;
+  width: 100%;
+  padding-right: 0px;
+  @include tablet {
+    padding-right: 0px;
+  }
+  @include desktop {
+    padding-right: 0px;
+  }
+}
 .header {
   &__link {
     &--active {
@@ -17,6 +31,7 @@
       @include desktop {
         width: 85px;
         padding-bottom: 0px;
+        margin-left: 0px;
       }
     }
     &--normal {
@@ -82,9 +97,9 @@
   order: 2;
   padding-bottom: 8px;
   @include tablet {
-    font-size: 2.4rem;
+    font-size: 2rem;
     width: 85%;
-    padding-left: $margin-tablet;
+    margin-left: 0px;
     font-family: "AvenirBold";
     padding-top: $pixel-96;
   }
@@ -113,7 +128,6 @@
   @include tablet {
     font-size: 4rem;
     width: 85%;
-    padding-left: $margin-tablet;
   }
   @include desktop {
     font-size: 3.6rem;
@@ -124,6 +138,10 @@
 
 .hero {
   &__text {
+    @include tablet {
+      margin-left: 0px;
+      padding-left: 0px;
+    }
     @include desktop {
       margin-right: 0px;
     }
@@ -140,7 +158,6 @@
     align-self: flex-start;
     width: 60%;
     height: 20vw;
-    margin-left: $pixel-24;
     padding-top: $pixel-32;
   }
   @include desktop {
@@ -161,25 +178,20 @@
     display: flex;
     flex-direction: column;
     height: 800px;
-    padding-right: $margin-tablet;
+    padding-left: 0px;
   }
   @include desktop {
     display: flex;
     position: relative;
     top: 80px;
     flex-direction: row;
-    margin-left: $margin-desktop;
-    margin-right: $margin-desktop;
+    padding-right: $margin-desktop;
+    padding-left: $margin-desktop;
   }
 }
 
 //SHOWS TEXT LAYOUT
 .shows {
-  @include tablet {
-    display: flex;
-    margin-right: $pixel-24;
-    margin-left: $pixel-24;
-  }
   &__heading {
     margin-top: 0px;
     margin-bottom: 40px;
@@ -197,6 +209,10 @@
       display: flex;
       flex-direction: column;
     }
+    @include desktop {
+      width: 90%;
+      align-self: flex-end;
+    }
   }
   &__title {
     color: $silver;
@@ -207,7 +223,7 @@
     width: 187px;
     @include tablet {
       display: flex;
-      width: 177px;
+      width: 203px;
     }
     &--mobile {
       color: $silver;
@@ -226,7 +242,7 @@
     &--non-mobile {
       @include tablet {
         display: flex;
-        padding-right: $pixel-16;
+        padding-right: 0px;
       }
     }
   }
@@ -249,16 +265,15 @@
     @include tablet {
       display: flex;
       flex-direction: column;
-      padding-right: 24px;
     }
   }
-
   &__text,
   &__text-2 {
     font-family: "AvenirLight";
     font-size: 1.2rem;
     line-height: 18px;
     margin-bottom: $pixel-32;
+
     @include tablet {
       margin-top: $pixel-32;
       font-size: 1rem;
@@ -274,6 +289,7 @@
       }
     }
   }
+
   &__button {
     position: relative;
     @include tablet {
@@ -285,7 +301,6 @@
       width: 160px;
     }
   }
-  //positioning of texts
 }
 
 .footer {
@@ -293,10 +308,4 @@
     position: relative;
     display: flex;
   }
-  // @include desktop {
-  //   padding-left: $margin-desktop;
-  //   padding-right: $margin-desktop;
-  //   font-size: 1rem;
-  //   top: 80px;
-  // }
 }

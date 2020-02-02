@@ -14,11 +14,11 @@
       padding-bottom: 13px;
       overflow-x: hidden;
       @include tablet {
-        jlkjpadding-bottom: 23px;
+        padding-bottom: 23px;
       }
       @include desktop {
         width: 85px;
-        fdspadding-bottom: 0px;
+        padding-bottom: 0px;
       }
     }
     &--normal {
@@ -113,12 +113,22 @@
 }
 
 .about-tagline-author {
-  font-family: "AvenirBold";
-  font-size: 12px;
-  line-height: 22px;
-  margin-bottom: $pixel-40;
+  margin-bottom: $pixel-32;
   @include desktop {
     padding-left: $pixel-56;
+  }
+}
+
+.heading-3 {
+  font-family: "AvenirBold";
+  font-size: 1.2rem;
+  line-height: 22px;
+  margin-bottom: $pixel-32;
+  @include desktop {
+    padding-left: $pixel-56;
+    margin-top: $pixel-56;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
     font-size: 1.2rem;
   }
 }
@@ -212,33 +222,103 @@
   }
 }
 
-//COMMENTS SECTION
+//COMMENTS SECTION - ADD NEW COMMENT
 //Used by the story header
 .comment-section {
-  margin-right: $pixel-16;
-  margin-left: $pixel-16;
+  width: 100%;
+  padding-left: $pixel-16;
   @include tablet {
     display: flex;
-    margin-right: $pixel-24;
-    margin-left: $pixel-24;
+    padding-right: $pixel-24;
+    padding-left: $pixel-24;
+    margin-bottom: $pixel-24;
+    flex-direction: column;
+  }
+  @include desktop {
+    position: relative;
+    display: flex;
+    margin-bottom: $pixel-32;
+    padding-left: 0px;
+    top: 80px;
+    padding-right: $pixel-24;
+    padding-left: $pixel-24;
+  }
+}
+
+.comments-title {
+  @include desktop {
+    display: flex;
+    margin-left: $margin-desktop;
+  }
+}
+
+.comment-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comment {
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 #comment {
   &__form {
     display: flex;
-    padding-right: $pixel-16;
-    border-bottom: 2px $mercury solid;
+    @include tablet {
+      justify-content: center;
+    }
   }
 }
 .heading-5,
 .comment-date {
   color: $silver;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 20px;
   font-family: "AvenirMedium";
   margin-bottom: $pixel-16;
-  margin-top: $pixel-24;
+  margin-top: $pixel-16;
+  @include tablet {
+    font-size: 1.1rem;
+    width: 422px;
+  }
+  @include desktop {
+    font-size: 1.2rem;
+  }
+}
+
+.new-comment-wrapper {
+  display: flex;
+  margin-bottom: $pixel-16;
+  border-bottom: 2px $mercury solid;
+  margin-right: 0px;
+  width: 100%;
+  @include tablet {
+    width: 525px;
+    padding-right: 0px;
+  }
+  @include desktop {
+    width: 528px;
+    padding-right: 0px;
+  }
+}
+
+.new-photo {
+  background-color: $mercury;
+  color: $mercury;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 0px solid $white;
+  margin-top: 50px;
+  margin-right: 10px;
+  @include tablet {
+    margin-right: 0px;
+  }
 }
 
 .photo {
@@ -248,13 +328,20 @@
   height: 50px;
   border-radius: 50%;
   border: 0px solid $white;
-  margin-top: 60px;
+  margin-top: 10px;
 }
 
 .button,
 .comment-submit {
   &:hover {
     background-color: black;
+    outline-style: none;
+    outline: transparent;
+    outline-color: none;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
   }
 }
 .text,
@@ -263,23 +350,85 @@
   height: 48px;
   width: 224px;
   margin-bottom: $pixel-16;
-  font-family: "AvenirLight";
-  font-size: 1rem;
+  font-family: "AvenirMedium";
+  font-size: 1.1rem;
   line-height: 18px;
-  border-radius: 4px;
+  border-radius: $pixel-4;
+  @include tablet {
+    margin: 0px;
+    padding: 0px;
+    width: 422px;
+  }
+  @include desktop {
+    margin: 0px;
+    padding: 0px;
+    min-width: 460px;
+  }
 }
 
+input.text {
+  padding-top: $pixel-8;
+  padding-bottom: $pixel-8;
+  color: $black;
+  padding-left: $pixel-8;
+}
+
+textarea.text-two {
+  padding-top: $pixel-8;
+  top: 0px;
+  color: $black;
+  padding-left: $pixel-8;
+}
+
+input,
+textarea {
+  &:focus {
+    border: 2px solid $black;
+    appearance: none !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: none !important;
+    outline-color: transparent;
+    overflow: auto;
+  }
+}
+.text {
+  @include tablet {
+    align-self: flex-end;
+  }
+}
 .text-two {
   height: 144px;
+  @include tablet {
+    margin-bottom: $pixel-24;
+  }
 }
 
 .comment-wrapper {
   display: flex;
+  margin-bottom: $pixel-16;
+  border-bottom: 2px $mercury solid;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-right: 0px;
+  width: 100%;
+  @include tablet {
+    width: 525px;
+    padding-right: 0px;
+  }
+  @include desktop {
+    width: 528px;
+    padding-right: 0px;
+  }
 }
 
 .comment-left {
   width: 20%;
   margin-right: 0px;
+  @include tablet {
+    width: 15%;
+  }
 }
 .comment-right,
 .comment-name,
@@ -288,30 +437,99 @@
   flex-direction: column;
 }
 
+.comment-name,
+.comment-comment {
+  @include tablet {
+    width: 422px;
+    text-align: left;
+  }
+  @include desktop {
+    min-width: 460px;
+  }
+}
+
 .comment-right {
-  width: 65%;
-  margin-left: $pixel-16;
+  width: 79%;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-right: 16px;
+  @include tablet {
+    width: 525px;
+    margin-right: 0px;
+    padding: 0px;
+    align-items: flex-end;
+    text-align: end;
+  }
+  @include desktop {
+    width: 528px;
+    margin-right: 0px;
+    padding: 0px;
+    align-items: flex-end;
+    text-align: end;
+  }
 }
 
 .comment-right-top {
   display: flex;
-}
-
-.comment-date,
-.comment-full-name {
-  width: 50%;
+  align-items: center;
+  @include tablet {
+    width: 422px;
+  }
+  @include desktop {
+    width: 460px;
+  }
 }
 
 .comment-submit {
   width: 224px;
+  @include tablet {
+    width: 160px;
+    align-self: flex-end;
+    margin-bottom: $pixel-24;
+  }
 }
 
-//DEFAULT COMMENTS STYLE
-.comment-date {
-  color: $silver;
-  font-size: 1.1rem;
+//DEFAULT COMMENTS STYLING
+.comment-full-name,
+.comment-date,
+.comment-comment {
+  color: $black;
+  font-size: 0.85rem;
   line-height: 20px;
   font-family: "AvenirRegular";
-  margin-bottom: $pixel-16;
-  margin-top: $pixel-24;
+  margin-bottom: $pixel-8;
+  margin-top: $pixel-8;
+  @include desktop {
+    font-size: 0.87rem;
+  }
+}
+.comment-date {
+  color: $silver;
+  text-align: right;
+  width: 40%;
+  @include desktop {
+    text-align: left;
+  }
+}
+
+.comment-full-name {
+  width: 60%;
+  font-family: "AvenirDemi";
+  @include tablet {
+    text-align: left;
+  }
+  @include desktop {
+    width: fit-content;
+    margin-right: 10px;
+  }
+}
+
+.comment-comment {
+  @include tablet {
+    text-align: left;
+  }
+  @include desktop {
+    text-align: left;
+    min-width: 460px;
+  }
 }

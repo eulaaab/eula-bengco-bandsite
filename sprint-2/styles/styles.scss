@@ -220,7 +220,8 @@ ul {
   margin-top: $pixel-32;
   margin-bottom: $pixel-24;
   position: relative;
-
+  margin-right: 0px;
+  width: 90%;
   @include tablet {
     font-size: 1.6rem;
   }

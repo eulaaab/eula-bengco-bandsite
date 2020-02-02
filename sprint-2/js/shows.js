@@ -75,6 +75,13 @@ locationHeader.classList.add("shows__header");
 locationHeader.classList.add("shows__title");
 rowWrapperHeader.appendChild(locationHeader);
 locationHeader.innerText = "LOCATION";
+
+let transparentHeader = document.createElement("h5");
+transparentHeader.classList.add("shows__header");
+transparentHeader.classList.add("shows__title");
+rowWrapperHeader.appendChild(transparentHeader);
+transparentHeader.innerText = "         ";
+
 //TABLET AND DESKTOP TABLE HEADERS END
 
 //WRAPPED MY ROWS SO THEY FLEX
