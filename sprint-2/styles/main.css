@@ -161,10 +161,11 @@
 
 .about-tagline {
   font-family: "AvenirMedium";
-  font-size: 1.35rem;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 22px;
   margin-top: 24px;
   margin-bottom: 32px;
+  height: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -190,6 +191,7 @@
 }
 
 .about-tagline-author {
+  font-family: "AvenirMedium";
   margin-bottom: 32px;
 }
 
@@ -531,7 +533,8 @@
 .text-two {
   background-color: #fafafa;
   height: 48px;
-  width: 224px;
+  min-width: 224px;
+  width: 100%;
   margin-bottom: 16px;
   font-family: "AvenirMedium";
   font-size: 1.1rem;

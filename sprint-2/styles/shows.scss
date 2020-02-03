@@ -57,8 +57,10 @@ body {
   display: flex;
   @include tablet {
     min-height: 670px;
+    padding-left: $margin-tablet;
   }
   @include desktop {
+    display: flex;
     flex-direction: row;
     min-height: 670px;
     padding: 0px;
@@ -68,9 +70,9 @@ body {
 .hero-container {
   @include desktop {
     display: flex;
-    margin-right: $margin-desktop;
   }
 }
+
 .hero {
   &__text {
     display: flex;
@@ -85,6 +87,7 @@ body {
     }
     @include desktop {
       display: flex;
+      width: 60%;
     }
   }
 }
@@ -108,7 +111,7 @@ body {
     padding-left: $margin-desktop;
     padding-right: $margin-desktop;
     font-size: 1.7rem;
-    width: 90%;
+    width: 100%;
     padding-bottom: 0px;
     margin-bottom: $pixel-32;
   }
@@ -132,7 +135,7 @@ body {
   @include desktop {
     font-size: 3.6rem;
     padding-left: $margin-desktop;
-    width: 95%;
+    width: 100%;
   }
 }
 
@@ -157,14 +160,17 @@ body {
     display: flex;
     align-self: flex-start;
     width: 60%;
-    height: 20vw;
+    height: 30%;
     padding-top: $pixel-32;
   }
   @include desktop {
     align-self: center;
-    width: 436px;
-    height: 146px;
+
+    min-width: 336px;
+    width: 25%;
+    height: 150px;
     align-self: flex-end;
+    margin-right: $margin-desktop;
   }
 }
 
@@ -175,10 +181,11 @@ body {
   padding-bottom: 0px;
   margin-bottom: 0px;
   @include tablet {
+    padding-left: $margin-tablet;
+    padding-right: $margin-tablet;
     display: flex;
     flex-direction: column;
     height: 800px;
-    padding-left: 0px;
   }
   @include desktop {
     display: flex;

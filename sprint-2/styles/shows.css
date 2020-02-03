@@ -119,11 +119,15 @@ body {
 @media screen and (min-width: 768px) {
   .hero {
     min-height: 670px;
+    padding-left: 24px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -138,7 +142,6 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-right: 140px;
   }
 }
 
@@ -170,6 +173,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 60%;
   }
 }
 
@@ -202,7 +206,7 @@ body {
     padding-left: 140px;
     padding-right: 140px;
     font-size: 1.7rem;
-    width: 90%;
+    width: 100%;
     padding-bottom: 0px;
     margin-bottom: 32px;
   }
@@ -237,7 +241,7 @@ body {
   .hero-title {
     font-size: 3.6rem;
     padding-left: 140px;
-    width: 95%;
+    width: 100%;
   }
 }
 
@@ -271,7 +275,7 @@ body {
     -ms-flex-item-align: start;
         align-self: flex-start;
     width: 60%;
-    height: 20vw;
+    height: 30%;
     padding-top: 32px;
   }
 }
@@ -281,10 +285,12 @@ body {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    width: 436px;
-    height: 146px;
+    min-width: 336px;
+    width: 25%;
+    height: 150px;
     -ms-flex-item-align: end;
         align-self: flex-end;
+    margin-right: 140px;
   }
 }
 
@@ -297,6 +303,8 @@ body {
 
 @media screen and (min-width: 768px) {
   .shows {
+    padding-left: 24px;
+    padding-right: 24px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -305,7 +313,6 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     height: 800px;
-    padding-left: 0px;
   }
 }
 
