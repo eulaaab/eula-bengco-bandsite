@@ -1,0 +1,72 @@
+@import "variables";
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin mobile-padding {
+  padding-left: $pixel-16;
+  padding-right: $pixel-16;
+}
+
+@mixin reset-margin {
+  padding: 0px;
+  margin: 0px;
+}
+
+@mixin icon {
+  width: 20px;
+  height: 25px;
+}
+@mixin fb-icon {
+  width: fit-content;
+  margin-left: $pixel-32;
+}
+
+@mixin tw-icon {
+  height: 20px;
+  width: 20px;
+  margin-left: $pixel-32;
+}
+
+//since it's standard for all headings of two webpges, made it a mixin as per spring 1 feedback
+@mixin heading-2 {
+  font-family: "AvenirBold";
+  font-size: 1.4rem;
+  line-height: 32px;
+  margin-top: $pixel-32;
+  margin-bottom: $pixel-24;
+  position: relative;
+  margin-right: 0px;
+  width: 90%;
+  @include tablet {
+    font-size: 1.6rem;
+  }
+  @include desktop {
+    font-size: 2rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@mixin heading-3 {
+  font-family: "AvenirBold";
+  font-size: 1.2rem;
+  line-height: 22px;
+  margin-bottom: $pixel-32;
+  @include desktop {
+    padding-left: $pixel-56;
+    margin-top: $pixel-56;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-size: 1.2rem;
+  }
+}

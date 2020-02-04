@@ -1,0 +1,557 @@
+@font-face {
+  font-family: AvenirUltraThin;
+  src: url("../assets/_Global_Font/AvenirNextProLT/Linotype-AvenirNextLTPro-UltLt.otf");
+}
+
+@font-face {
+  font-family: AvenirLight;
+  src: url("../assets/_Global_Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Light.otf");
+}
+
+@font-face {
+  font-family: AvenirRegular;
+  src: url("../assets/_Global_Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Regular.otf");
+}
+
+@font-face {
+  font-family: AvenirMedium;
+  src: url("../assets/_Global_Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Medium.otf");
+}
+
+@font-face {
+  font-family: AvenirDemi;
+  src: url("../assets/_Global_Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Demi.otf");
+}
+
+@font-face {
+  font-family: AvenirBold;
+  src: url("../assets/_Global_Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Bold.otf");
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "AvenirRegular", sans-serif;
+  width: 100%;
+  margin-right: 0px;
+}
+
+ul li {
+  list-style: none;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #323232;
+  width: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: auto;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.header__name {
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__name {
+    width: 30%;
+    margin-left: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__name {
+    width: 150px;
+    margin-left: 140px;
+    margin-right: 0px;
+  }
+}
+
+.header__logo {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px auto;
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: 20px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 24px;
+    width: auto;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    -ms-grid-column-align: left;
+        justify-self: left;
+    margin-right: 0px;
+    padding-right: 0px;
+    margin: 0px;
+  }
+}
+
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__nav {
+    width: 70%;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 30px;
+  }
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 17px;
+  margin-top: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__list {
+    padding-left: 0px;
+    margin-top: 20px;
+    margin-left: 0px;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__list {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    padding-left: 0px;
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+}
+
+.header__item {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  color: #afafaf;
+}
+
+@media screen and (min-width: 768px) {
+  .header__item {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    width: auto;
+    padding-left: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__item {
+    padding-left: 60px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+.header__link {
+  text-decoration: none;
+}
+
+.header__link:hover {
+  color: lightcoral;
+}
+
+.hero {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 183px;
+  width: 100%;
+  height: 60vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 70vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 70vw;
+    top: 80px;
+  }
+}
+
+.hero__overlay {
+  position: absolute;
+  background-color: #323232;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  color: #ffffff;
+  background-color: #323232;
+  height: 48px;
+  width: 288px;
+  margin-bottom: 16px;
+  font-family: "AvenirLight";
+  font-size: 1.2rem;
+  line-height: 18px;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .button {
+    place-content: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-size: 1rem;
+    font-family: "AvenirRegular";
+    margin-bottom: 0px;
+    width: 150px;
+  }
+}
+
+.footer {
+  background-color: #323232;
+  color: #ffffff;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 0.9rem;
+    padding-top: 32px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding-left: 140px;
+    padding-right: 140px;
+    font-size: 1rem;
+    top: 80px;
+  }
+}
+
+.footer__header {
+  padding-top: 24px;
+  font-size: 1.4rem;
+  font-family: "AvenirBold";
+  font-size: 1.4rem;
+  line-height: 32px;
+  margin-top: 32px;
+  margin-bottom: 24px;
+  position: relative;
+  margin-right: 0px;
+  width: 90%;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__header {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__header {
+    font-size: 2rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__header {
+    font-size: 1.8rem;
+    width: 500px;
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__header {
+    font-size: 2.3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__nav-bar {
+    padding-bottom: 48px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__nav-bar, .footer__left, .footer__right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.footer__right {
+  width: 40%;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__right {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__right {
+    width: 23%;
+  }
+}
+
+.footer__logo {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 20px;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__logo {
+    width: 120px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-right: 0px;
+  }
+}
+
+.footer__copyright {
+  width: 70%;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__copyright {
+    font-size: 0.8rem;
+    padding-top: 16px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__copyright {
+    font-size: 0.9rem;
+  }
+}
+
+.social__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 24px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .social__list {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding-bottom: 0px;
+  }
+}
+
+.social__item {
+  width: 20px;
+  height: 25px;
+}
+
+.social__item--fb {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 32px;
+}
+
+.social__item--twit {
+  height: 20px;
+  width: 20px;
+  margin-left: 32px;
+}
+
+.booking__text {
+  padding-top: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .booking__text {
+    padding-top: 0px;
+  }
+}
+
+.booking__text--bold {
+  font-family: "AvenirDemi";
+}
+
+.booking__row {
+  padding-bottom: 24px;
+}
+
+.booking__email:hover, .booking__email:-webkit-any-link, .booking__email:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.booking__email:hover, .booking__email:-moz-any-link, .booking__email:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.booking__email:hover, .booking__email:any-link, .booking__email:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .booking__column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-right: 0px;
+    margin-right: 0px;
+    width: 30%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

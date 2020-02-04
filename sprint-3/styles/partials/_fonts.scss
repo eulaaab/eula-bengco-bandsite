@@ -1,0 +1,40 @@
+//EULA BENGCO FONT SCSS
+// FONTS - Order from Thinnest to Boldest
+//I only took the non-italicized because I noticed there's nothing to Italicize
+//Also removed Thin and Heavy because they're not used as per spring 1 feedback
+
+// ULTRA THIN FONT
+@font-face {
+  font-family: AvenirUltraThin;
+  src: url("../assets/_Global_Font/AvenirNextProLT/Linotype-AvenirNextLTPro-UltLt.otf");
+}
+
+// LIGHT FONT
+@font-face {
+  font-family: AvenirLight;
+  src: url("../assets/_Global_Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Light.otf");
+}
+
+//REGULAR FONT
+@font-face {
+  font-family: AvenirRegular;
+  src: url("../assets/_Global_Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Regular.otf");
+}
+
+// MEDIUM FONT
+@font-face {
+  font-family: AvenirMedium;
+  src: url("../assets/_Global_Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Medium.otf");
+}
+
+// THIS LOOKS LIKE THIN BUT HAS SOME BOLD aka SEMIBOLD
+@font-face {
+  font-family: AvenirDemi;
+  src: url("../assets/_Global_Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Demi.otf");
+}
+
+// SUPER BOLD FONT
+@font-face {
+  font-family: AvenirBold;
+  src: url("../assets/_Global_Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Bold.otf");
+}
