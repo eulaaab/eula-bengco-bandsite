@@ -1,36 +1,36 @@
 // Eula Bengco SHOWS JAVASCRIPT FILE
-let showObj = [
-  {
-    date: "Mon Dec 17 2018",
-    venue: "Ronald Lane",
-    location: "San Fancisco, CA"
-  },
-  {
-    date: "Tue Jul 18 2019",
-    venue: "Pier 3 East",
-    location: "San Fancisco, CA"
-  },
-  {
-    date: "Fri Jul 22 2019",
-    venue: "View Loungue",
-    location: "San Fancisco, CA"
-  },
-  {
-    date: "Sat Aug 12 2019",
-    venue: "Hyatt Agency",
-    location: "San Fancisco, CA"
-  },
-  {
-    date: "Fri Sep 05 2019",
-    venue: "Moscow Center",
-    location: "San Fancisco, CA"
-  },
-  {
-    date: "Wed Aug 11 2019",
-    venue: "Pres Club",
-    location: "San Fancisco, CA"
-  }
-];
+// let showObj = [
+//   {
+//     date: "Mon Dec 17 2018",
+//     venue: "Ronald Lane",
+//     location: "San Fancisco, CA"
+//   },
+//   {
+//     date: "Tue Jul 18 2019",
+//     venue: "Pier 3 East",
+//     location: "San Fancisco, CA"
+//   },
+//   {
+//     date: "Fri Jul 22 2019",
+//     venue: "View Loungue",
+//     location: "San Fancisco, CA"
+//   },
+//   {
+//     date: "Sat Aug 12 2019",
+//     venue: "Hyatt Agency",
+//     location: "San Fancisco, CA"
+//   },
+//   {
+//     date: "Fri Sep 05 2019",
+//     venue: "Moscow Center",
+//     location: "San Fancisco, CA"
+//   },
+//   {
+//     date: "Wed Aug 11 2019",
+//     venue: "Pres Club",
+//     location: "San Fancisco, CA"
+//   }
+// ];
 
 //MAKES SHOWS HEADING FOR TABLET AND DESKTOP
 let parentContainer = document.querySelector([".shows"]);
@@ -88,72 +88,148 @@ transparentHeader.innerText = "         ";
 let showRowWrapper = document.createElement("div");
 parentContainerTwo.appendChild(showTableWrapper);
 
+axios
+  .get(
+    "https://project-1-api.herokuapp.com/showdates?api_key=5276e2d7-0178-438b-b62f-748cd9a1f823"
+  )
+  .then(response => {
+    console.log(response);
+    console.log(response.data[1].date);
+
+    for (i = 0; i < response.data.length; i++) {
+      let rowWrapper = document.createElement("div");
+      parentContainerTwo.appendChild(showTableWrapper);
+      rowWrapper.classList.add("shows__wrapper");
+      showTableWrapper.appendChild(rowWrapper);
+
+      //DATE MOBILE HEADER
+      let headingDateMobile = document.createElement("div");
+      headingDateMobile.classList.add("shows__title--mobile");
+      document.querySelectorAll(".shows__title--mobile");
+      headingDateMobile.innerText = "DATE";
+      rowWrapper.appendChild(headingDateMobile);
+
+      //DATE FROM OBJECT showObj
+      // //makes a variable and creats the element div inside the parent container
+      let showsContainer = document.createElement("div");
+      // //the variable shows container get than and put a class in there showDate
+      showsContainer.classList.add("shows__text--bold"); //styling bold
+      // //grab the wrapper and that's where you are going to put the new element you created
+      rowWrapper.appendChild(showsContainer);
+      let x = (document.querySelectorAll(".shows__text--bold")[i].innerText =
+        response.data[i].date); //my prettier in vs code makes this multi-line
+      console.log(x); //checking if my for loop is working
+
+      //VENUE MOBILE HEADER
+      let headingVenueMobile = document.createElement("div");
+      headingVenueMobile.classList.add("shows__title--mobile");
+      document.querySelectorAll(".shows__title--mobile");
+      headingVenueMobile.innerText = "VENUE";
+      rowWrapper.appendChild(headingVenueMobile);
+
+      //VENUE FROM OBJECT showObj
+      let showsContainerTwo = document.createElement("div");
+      showsContainerTwo.classList.add("shows__text");
+      rowWrapper.appendChild(showsContainerTwo);
+      let y = (document.querySelectorAll(".shows__text")[i].innerText =
+        response.data[i].place);
+      console.log(y);
+
+      //LOCATION MOBILE HEADER
+      let headingLocationMobile = document.createElement("div");
+      headingLocationMobile.classList.add("shows__title--mobile");
+      document.querySelectorAll(".shows__title--mobile");
+      headingLocationMobile.innerText = "LOCATION";
+      rowWrapper.appendChild(headingLocationMobile);
+
+      //LOCATION FROM OBJECT showObj
+      let showsContainerThree = document.createElement("div");
+      showsContainerThree.classList.add("shows__text-2");
+      showsContainerThree.classList.add("shows__text-2"); //add styling
+      rowWrapper.appendChild(showsContainerThree);
+      let z = (document.querySelectorAll(".shows__text-2")[i].innerText =
+        response.data[i].location);
+      console.log(z);
+
+      //BUTTONS BUY TICKETS
+      let buttonShowsDiv = document.createElement("div"); //container
+      let buttonShows = document.createElement("button");
+      buttonShowsDiv.classList.add("shows__button");
+      document.querySelectorAll(".shows__button");
+      buttonShows.classList.add("button");
+      document.querySelectorAll(".button");
+      buttonShows.innerText = "BUY TICKETS";
+      buttonShowsDiv.appendChild(buttonShows);
+      rowWrapper.appendChild(buttonShowsDiv);
+    }
+  });
+
 //Method is for loop because when I did this on Wednesday and Thursday it was working. To practice my for loop coding
-for (i = 0; i < showObj.length; i++) {
-  let rowWrapper = document.createElement("div");
-  parentContainerTwo.appendChild(showTableWrapper);
-  rowWrapper.classList.add("shows__wrapper");
-  showTableWrapper.appendChild(rowWrapper);
+// for (i = 0; i < showObj.length; i++) {
+//   let rowWrapper = document.createElement("div");
+//   parentContainerTwo.appendChild(showTableWrapper);
+//   rowWrapper.classList.add("shows__wrapper");
+//   showTableWrapper.appendChild(rowWrapper);
 
-  //DATE MOBILE HEADER
-  let headingDateMobile = document.createElement("div");
-  headingDateMobile.classList.add("shows__title--mobile");
-  document.querySelectorAll(".shows__title--mobile");
-  headingDateMobile.innerText = "DATE";
-  rowWrapper.appendChild(headingDateMobile);
+//   //DATE MOBILE HEADER
+//   let headingDateMobile = document.createElement("div");
+//   headingDateMobile.classList.add("shows__title--mobile");
+//   document.querySelectorAll(".shows__title--mobile");
+//   headingDateMobile.innerText = "DATE";
+//   rowWrapper.appendChild(headingDateMobile);
 
-  //DATE FROM OBJECT showObj
-  // //makes a variable and creats the element div inside the parent container
-  let showsContainer = document.createElement("div");
-  // //the variable shows container get than and put a class in there showDate
-  showsContainer.classList.add("shows__text--bold"); //styling bold
-  // //grab the wrapper and that's where you are going to put the new element you created
-  rowWrapper.appendChild(showsContainer);
-  document.querySelectorAll(".shows__text--bold")[i].innerText =
-    showObj[i].date;
-  let x = (document.querySelectorAll(".shows__text--bold")[i].innerText =
-    showObj[i].date); //my prettier in vs code makes this multi-line
-  console.log(x); //checking if my for loop is working
+//   //DATE FROM OBJECT showObj
+//   // //makes a variable and creats the element div inside the parent container
+//   let showsContainer = document.createElement("div");
+//   // //the variable shows container get than and put a class in there showDate
+//   showsContainer.classList.add("shows__text--bold"); //styling bold
+//   // //grab the wrapper and that's where you are going to put the new element you created
+//   rowWrapper.appendChild(showsContainer);
+//   document.querySelectorAll(".shows__text--bold")[i].innerText =
+//     showObj[i].date;
+//   let x = (document.querySelectorAll(".shows__text--bold")[i].innerText =
+//     showObj[i].date); //my prettier in vs code makes this multi-line
+//   console.log(x); //checking if my for loop is working
 
-  //VENUE MOBILE HEADER
-  let headingVenueMobile = document.createElement("div");
-  headingVenueMobile.classList.add("shows__title--mobile");
-  document.querySelectorAll(".shows__title--mobile");
-  headingVenueMobile.innerText = "VENUE";
-  rowWrapper.appendChild(headingVenueMobile);
+//   //VENUE MOBILE HEADER
+//   let headingVenueMobile = document.createElement("div");
+//   headingVenueMobile.classList.add("shows__title--mobile");
+//   document.querySelectorAll(".shows__title--mobile");
+//   headingVenueMobile.innerText = "VENUE";
+//   rowWrapper.appendChild(headingVenueMobile);
 
-  //VENUE FROM OBJECT showObj
-  let showsContainerTwo = document.createElement("div");
-  showsContainerTwo.classList.add("shows__text");
-  rowWrapper.appendChild(showsContainerTwo);
-  let y = (document.querySelectorAll(".shows__text")[i].innerText =
-    showObj[i].venue);
-  console.log(y);
+//   //VENUE FROM OBJECT showObj
+//   let showsContainerTwo = document.createElement("div");
+//   showsContainerTwo.classList.add("shows__text");
+//   rowWrapper.appendChild(showsContainerTwo);
+//   let y = (document.querySelectorAll(".shows__text")[i].innerText =
+//     showObj[i].venue);
+//   console.log(y);
 
-  //LOCATION MOBILE HEADER
-  let headingLocationMobile = document.createElement("div");
-  headingLocationMobile.classList.add("shows__title--mobile");
-  document.querySelectorAll(".shows__title--mobile");
-  headingLocationMobile.innerText = "LOCATION";
-  rowWrapper.appendChild(headingLocationMobile);
+//   //LOCATION MOBILE HEADER
+//   let headingLocationMobile = document.createElement("div");
+//   headingLocationMobile.classList.add("shows__title--mobile");
+//   document.querySelectorAll(".shows__title--mobile");
+//   headingLocationMobile.innerText = "LOCATION";
+//   rowWrapper.appendChild(headingLocationMobile);
 
-  //LOCATION FROM OBJECT showObj
-  let showsContainerThree = document.createElement("div");
-  showsContainerThree.classList.add("shows__text-2");
-  showsContainerThree.classList.add("shows__text-2"); //add styling
-  rowWrapper.appendChild(showsContainerThree);
-  let z = (document.querySelectorAll(".shows__text-2")[i].innerText =
-    showObj[i].location);
-  console.log(z);
+//   //LOCATION FROM OBJECT showObj
+//   let showsContainerThree = document.createElement("div");
+//   showsContainerThree.classList.add("shows__text-2");
+//   showsContainerThree.classList.add("shows__text-2"); //add styling
+//   rowWrapper.appendChild(showsContainerThree);
+//   let z = (document.querySelectorAll(".shows__text-2")[i].innerText =
+//     showObj[i].location);
+//   console.log(z);
 
-  //BUTTONS BUY TICKETS
-  let buttonShowsDiv = document.createElement("div"); //container
-  let buttonShows = document.createElement("button");
-  buttonShowsDiv.classList.add("shows__button");
-  document.querySelectorAll(".shows__button");
-  buttonShows.classList.add("button");
-  document.querySelectorAll(".button");
-  buttonShows.innerText = "BUY TICKETS";
-  buttonShowsDiv.appendChild(buttonShows);
-  rowWrapper.appendChild(buttonShowsDiv);
-}
+//   //BUTTONS BUY TICKETS
+//   let buttonShowsDiv = document.createElement("div"); //container
+//   let buttonShows = document.createElement("button");
+//   buttonShowsDiv.classList.add("shows__button");
+//   document.querySelectorAll(".shows__button");
+//   buttonShows.classList.add("button");
+//   document.querySelectorAll(".button");
+//   buttonShows.innerText = "BUY TICKETS";
+//   buttonShowsDiv.appendChild(buttonShows);
+//   rowWrapper.appendChild(buttonShowsDiv);
+// }
