@@ -54,192 +54,133 @@ let commentsObj = axios
       commentName.classList.add("comment-full-name");
       commentDivRightTop.appendChild(commentName);
       let commentNameItem = (commentName.innerText = zData.name);
-      console.log(commentNameItem);
+      // console.log(commentNameItem);
 
       let commentDate = document.createElement("div");
       commentDate.classList.add("comment-date");
       commentDivRightTop.appendChild(commentDate);
       commentDate.innerText = zData.timestamp;
-      console.log(zData.timstamp);
+      // console.log(zData.timstamp);
 
       let commentComment = document.createElement("div");
       commentComment.classList.add("comment-comment");
       commentComment.innerText = zData.comment;
       commentDivRight.appendChild(commentComment);
-      console.log(zData.comment);
+      // console.log(zData.comment);
     });
     commentsDateArr = commentsArr[0].timestamp;
     console.log(commentsDateArr);
   });
 
+//   //For the date
+//   let dateForm = new Date();
+
+//   let newCommentDateDay = dateForm.getDate();
+//   let newCommentDateMonth = dateForm.getMonth() + 1;
+//   let newCommentDateYear = dateForm.getFullYear();
+//   let newCommentDate = `${newCommentDateDay}/${newCommentDateMonth}/${newCommentDateYear}`;
+
+//   console.log(newCommentDate);
+
+//   let newDate = displayComment.target.comment.value;
+//   console.log(newDate);
+// });
+
 let form = document.getElementById(["comment__form"]);
-// console.log(form);
+console.log(form);
+form.addEventListener("submit", displayComment => {
+  displayComment.preventDefault();
 
-form
-  .addEventListener("submit", displayComment => {
-    displayComment.preventDefault();
-    let newName = displayComment.target.name.value;
-    let newComment = displayComment.target.comment.value;
+  let newName = displayComment.target.name.value;
+  console.log(newName);
+  let newComment = displayComment.target.comment.value;
+  console.log(newComment);
 
-    //For the date
-    let dateForm = new Date();
+  //date stuff
+  let dateForm = new Date();
+  let newCommentDateDay = dateForm.getDate();
+  let newCommentDateMonth = dateForm.getMonth() + 1;
+  let newCommentDateYear = dateForm.getFullYear();
+  let newCommentDate = `${newCommentDateDay}/${newCommentDateMonth}/${newCommentDateYear}`;
+  console.log(newCommentDate);
 
-    let newCommentDateDay = dateForm.getDate();
-    let newCommentDateMonth = dateForm.getMonth() + 1;
-    let newCommentDateYear = dateForm.getFullYear();
-    let newCommentDate = `${newCommentDateDay}/${newCommentDateMonth}/${newCommentDateYear}`;
-
-    console.log(newCommentDate);
-
-    let newDate = displayComment.target.comment.value;
-    console.log(newDate);
-
-    let newC = axios.post(
+  // let newCommentPost =
+  axios
+    .post(
       "https://project-1-api.herokuapp.com/comments?api_key=5276e2d7-0178-438b-b62f-748cd9a1f823",
       {
         name: newName,
-        comment: newComment,
-        timestamp: newDate
+        comment: newComment
       }
-    );
-  })
-  .then(res => {
-    console.log(res);
-  })
-  .catch(err => {
-    console.log(err);
-  });
-// commentsObj.unshift({
-//   name: newCommentName,
-//   date: newCommentDate,
-//   text: newCommentText
+    )
+    .then(res => {
+      axios.get(
+        "https://project-1-api.herokuapp.com/comments?api_key=5276e2d7-0178-438b-b62f-748cd9a1f823"
+      );
+      console.log(res);
+      let commentWrapper = document.createElement("div");
+      commentWrapper.classList.add("comment-wrapper");
+      commentParent.appendChild(commentWrapper);
+
+      //LEFT SIDE
+      let commentDivLeft = document.createElement(["div"]);
+      commentDivLeft.classList.add("comment-left");
+      commentWrapper.appendChild(commentDivLeft);
+
+      let commentDivRight = document.createElement(["div"]);
+      commentDivRight.classList.add("comment-right");
+      commentWrapper.appendChild(commentDivRight);
+
+      let commentDivRightTop = document.createElement(["div"]);
+      commentDivRightTop.classList.add("comment-right-top");
+      commentDivRight.appendChild(commentDivRightTop);
+
+      let commentName = document.createElement("div");
+      commentName.classList.add("comment-full-name");
+      commentDivRightTop.appendChild(commentName);
+      commentName.innerText = newName;
+      // console.log(commentNameItem);
+
+      let commentDate = document.createElement("div");
+      commentDate.classList.add("comment-date");
+      commentDivRightTop.appendChild(commentDate);
+      commentDate.innerText = newCommentDate;
+      // console.log(zData.timstamp);
+
+      let commentComment = document.createElement("div");
+      commentComment.classList.add("comment-comment");
+      commentComment.innerText = newComment;
+      commentDivRight.appendChild(commentComment);
+      // console.log(zData.comment);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+// axios
+//     .get(
+//       "https://project-1-api.herokuapp.com/comments?api_key=5276e2d7-0178-438b-b62f-748cd9a1f823"
+// ,
+// {
+//   name: newName,
+//   comment: newComment
+// }
+//     )
+//   .then(res => {
+//   console.log(res);
+// })
+// .catch(err => {
+//   console.log(err);
 // });
+// console.log(response);
 
-//   console.log(commentsObj);
-
-// let form = document.querySelector("form");
-// console.log(form);
-
-// form.addEventListener("submit", evt => {
-//   evt.preventDefault();
-
-//   let name = evt.target.name.value;
-//   let comment = evt.target.comment.value;
-
-//   axios
-//     .post("https://powerful-beyond-86109.herokuapp.com/posts", {
-//       name: name,
-//       comment: comment
-//     })
-//     .then(res => {
-//       console.log(res);
-//     })
-//     .catch(err => {
-//       console.log(err);
-//     });
-// });
-
-//   let newCommentName = displayComment.target.name.value;
-//   let newCommentText = displayComment.target.comment.value;
-
-//   //For the date
-//   let d = new Date();
-
-//   let newCommentDateDay = d.getDate();
-//   let newCommentDateMonth = d.getMonth() + 1;
-//   let newCommentDateYear = d.getFullYear();
-//   let newCommentDate = `${newCommentDateDay}/${newCommentDateMonth}/${newCommentDateYear}`;
-
-//   console.log(newCommentDateDay);
-
-//   let date = displayComment.target.comment.value;
-//   console.log(date);
-
-//   commentsObj.unshift({
-//     name: newCommentName,
-//     date: newCommentDate,
-//     text: newCommentText
-//   });
-
-//   console.log(commentsObj);
-
-//   commentParent.innerText = "";
-//   document.querySelector(".text").value = "";
-//   document.querySelector(".text-two").value = "";
-
-//   commentsObj.forEach(val2 => {
-//     let commentWrapper = document.createElement("div");
-//     commentWrapper.classList.add("comment-wrapper");
-//     commentParent.appendChild(commentWrapper);
-
-//     //LEFT SIDE
-//     let commentDivLeft = document.createElement(["div"]);
-//     commentDivLeft.classList.add("comment-left");
-//     commentWrapper.appendChild(commentDivLeft);
-
-//     let commentPhoto = document.createElement("div");
-//     commentPhoto.classList.add("photo");
-//     commentDivLeft.appendChild(commentPhoto);
-
-//     //RIGHT SIDE
-//     let commentDivRight = document.createElement(["div"]);
-//     commentDivRight.classList.add("comment-right");
-//     commentWrapper.appendChild(commentDivRight);
-
-//     let commentDivRightTop = document.createElement(["div"]);
-//     commentDivRightTop.classList.add("comment-right-top");
-//     commentDivRight.appendChild(commentDivRightTop);
-
-//     let commentName = document.createElement("div");
-//     commentName.classList.add("comment-full-name");
-//     commentDivRightTop.appendChild(commentName);
-//     commentName.innerText = val2.name;
-//     console.log(commentName);
-//     //displayComment.target.comment.value
-
-//     let commentDate = document.createElement("div");
-//     commentDate.classList.add("comment-date");
-//     commentDivRightTop.appendChild(commentDate);
-//     commentDate.innerText = val2.date;
-//     console.log(commentDate);
-
-//     let commentComment = document.createElement("div");
-//     commentComment.classList.add("comment-comment");
-//     commentDivRight.appendChild(commentComment);
-//     commentComment.innerText = val2.text;
-//     console.log(commentComment);
-//   });
-// });
-
-//ANOTHER WAY OF FOREACH BUT FOUND THE EFFICIENT WAY ABOVE
-//I'm leaving this here for my own reference
-// const commentContainerTwo = document.createElement("div");
-// commentContainerTwo.classList.add("comment__name");
-// commentParent.appendChild(commentContainerTwo);
-
-// document.querySelectorAll(".comment__name").innerText = val.name;
-// console.log(val.name);
-
-// const commentContainerThree = document.createElement("div");
-// commentContainerThree.classList.add("comment__text");
-// commentParent.appendChild(commentContainerThree);
-// document.querySelectorAll(".comment__text").innerText = val.text;
-// console.log(val.text);
-
-// let commentContainerTwo = document.createElement("div");
-// commentContainerTwo.classList.add("comment__name");
-// commentParent.appendChild(commentContainerTwo);
-// commentContainerTwo.innerText = commentsObj.name;
-// console.log(commentContainerTwo);
-
-// console.log(displayComment.target.comment.value);
-// let commentContainer = document.createElement("div");
-// commentContainer.classList.add("comment__date");
-// commentContainer.innerText = commentsObj.date;
-// commentParent.appendChild(commentContainer);
-// console.log(commentContainer);
-
-// let commentContainerThree = document.createElement("div");
-// commentContainerThree.classList.add("comment__text");
-// commentParent.appendChild(commentContainerThree);
-// commentContainerThree.innerText = commentsObj.text;
+// newCommentPost;
+// let newCommentGet = axios.post(
+//   "https://project-1-api.herokuapp.com/comments?api_key=5276e2d7-0178-438b-b62f-748cd9a1f823",
+//   {
+//     name: newName,
+//     comment: newComment,
+//     timestamp: newDate
+//   }
+// );
