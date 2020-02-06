@@ -185,6 +185,7 @@ body {
   }
   //SHOWS TEXT LAYOUT
   &__heading {
+    @include heading-2;
     margin-top: 0px;
     margin-bottom: 40px;
     @include tablet {
