@@ -47,13 +47,13 @@ transparentHeader.innerText = "         ";
 let showRowWrapper = document.createElement("div");
 parentContainerTwo.appendChild(showTableWrapper);
 
+//AXIOS GET TO RENDER SHOWS DATA ON WEBPAGE
 axios
   .get(
     "https://project-1-api.herokuapp.com/showdates?api_key=5276e2d7-0178-438b-b62f-748cd9a1f823"
   )
   .then(response => {
     let showsArr = response.data;
-
     showsArr.forEach(showsData => {
       let rowWrapper = document.createElement("div");
       parentContainerTwo.appendChild(showTableWrapper);
@@ -112,4 +112,7 @@ axios
       buttonShows.innerText = "BUY TICKETS";
       buttonShowsDiv.appendChild(buttonShows);
     });
+  })
+  .catch(error => {
+    console.log("Error!");
   });

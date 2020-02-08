@@ -70,3 +70,113 @@
     font-size: 1.2rem;
   }
 }
+
+@mixin heading-5 {
+  color: $silver;
+  font-size: 1rem;
+  line-height: 20px;
+  font-family: "AvenirMedium";
+  margin-bottom: $pixel-16;
+  margin-top: $pixel-16;
+  @include tablet {
+    font-size: 1.1rem;
+    width: 422px;
+  }
+  @include desktop {
+    font-size: 1.2rem;
+  }
+}
+
+@mixin input-date-style {
+  color: $alabaster;
+  height: 48px;
+  min-width: 224px;
+  margin-bottom: $pixel-16;
+  font-family: "AvenirThin";
+  font-size: 1.1rem;
+  line-height: 18px;
+  border-radius: $pixel-4;
+  color: $silver;
+  text-align: right;
+  width: 40%;
+  @include tablet {
+    margin: 0px;
+    padding: 0px;
+    width: 422px;
+  }
+  @include desktop {
+    margin: 0px;
+    padding: 0px;
+    min-width: 460px;
+  }
+}
+
+@mixin label-text-style {
+  height: 48px;
+  min-width: 224px;
+  width: 100%;
+  margin-bottom: $pixel-16;
+  font-family: "AvenirMedium";
+  font-size: 1.1rem;
+  line-height: 18px;
+  border-radius: $pixel-4;
+  @include tablet {
+    margin: 0px;
+    padding: 0px;
+    width: 422px;
+  }
+  @include desktop {
+    margin: 0px;
+    padding: 0px;
+    min-width: 460px;
+  }
+}
+
+@mixin input-text-style {
+  background-color: $alabaster;
+  height: 48px;
+  min-width: 224px;
+  width: 100%;
+  margin-bottom: $pixel-16;
+  font-family: "AvenirMedium";
+  font-size: 1.1rem;
+  line-height: 18px;
+  border-radius: $pixel-4;
+  @include tablet {
+    margin: 0px;
+    padding: 0px;
+    width: 422px;
+  }
+  @include desktop {
+    margin: 0px;
+    padding: 0px;
+    min-width: 460px;
+  }
+}
+
+@mixin date-comment-style {
+  color: $silver;
+  text-align: right;
+  width: 40%;
+  font-size: 0.85rem;
+  line-height: 20px;
+  font-family: "AvenirRegular";
+  margin-bottom: $pixel-8;
+  margin-top: $pixel-8;
+  @include desktop {
+    text-align: left;
+    font-size: 0.87rem;
+  }
+}
+
+@mixin default-comment-style {
+  color: $black;
+  font-size: 0.85rem;
+  line-height: 20px;
+  font-family: "AvenirRegular";
+  margin-bottom: $pixel-8;
+  margin-top: $pixel-8;
+  @include desktop {
+    font-size: 0.87rem;
+  }
+}

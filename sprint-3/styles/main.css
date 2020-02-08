@@ -159,6 +159,23 @@
   }
 }
 
+.about__sub-title {
+  font-family: "AvenirBold";
+  font-size: 1.2rem;
+  line-height: 22px;
+  margin-bottom: 32px;
+}
+
+@media screen and (min-width: 1200px) {
+  .about__sub-title {
+    padding-left: 56px;
+    margin-top: 56px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-size: 1.2rem;
+  }
+}
+
 .about__image {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -266,23 +283,6 @@
   }
 }
 
-.heading-3 {
-  font-family: "AvenirBold";
-  font-size: 1.2rem;
-  line-height: 22px;
-  margin-bottom: 32px;
-}
-
-@media screen and (min-width: 1200px) {
-  .heading-3 {
-    padding-left: 56px;
-    margin-top: 56px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-    font-size: 1.2rem;
-  }
-}
-
 .gallery {
   background-color: #fafafa;
   padding-left: 16px;
@@ -309,8 +309,36 @@
   }
 }
 
+.gallery__title {
+  font-family: "AvenirBold";
+  font-size: 1.4rem;
+  line-height: 32px;
+  margin-top: 32px;
+  margin-bottom: 24px;
+  position: relative;
+  margin-right: 0px;
+  width: 90%;
+  padding-top: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery__title {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery__title {
+    font-size: 2rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
 .gallery__image {
   padding-bottom: 16px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 @media screen and (min-width: 600px) and (max-width: 768px) {
@@ -349,8 +377,8 @@
 }
 
 .gallery__image:hover {
-  -webkit-filter: grayscale(30%);
-          filter: grayscale(30%);
+  -webkit-filter: none;
+          filter: none;
 }
 
 @media screen and (min-width: 600px) and (max-width: 768px) {
@@ -372,13 +400,13 @@
   }
 }
 
-.comment-section {
+.comment__section {
   width: 100%;
   padding-left: 16px;
 }
 
 @media screen and (min-width: 768px) {
-  .comment-section {
+  .comment__section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -393,7 +421,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .comment-section {
+  .comment__section {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -406,8 +434,33 @@
   }
 }
 
+.comment__title {
+  font-family: "AvenirBold";
+  font-size: 1.4rem;
+  line-height: 32px;
+  margin-top: 32px;
+  margin-bottom: 24px;
+  position: relative;
+  margin-right: 0px;
+  width: 90%;
+}
+
+@media screen and (min-width: 768px) {
+  .comment__title {
+    font-size: 1.6rem;
+  }
+}
+
 @media screen and (min-width: 1200px) {
-  .comments-title {
+  .comment__title {
+    font-size: 2rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comment__title {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -415,7 +468,7 @@
   }
 }
 
-.comment-content {
+.comment__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -428,8 +481,196 @@
           align-items: center;
 }
 
+.comment__date {
+  color: #afafaf;
+  text-align: right;
+  width: 40%;
+  font-size: 0.85rem;
+  line-height: 20px;
+  font-family: "AvenirRegular";
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .comment__date {
+    text-align: left;
+    font-size: 0.87rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comment__date {
+    text-align: left;
+  }
+}
+
+.comment__label {
+  color: #afafaf;
+  font-size: 1rem;
+  line-height: 20px;
+  font-family: "AvenirMedium";
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
 @media screen and (min-width: 768px) {
-  .comment {
+  .comment__label {
+    font-size: 1.1rem;
+    width: 422px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comment__label {
+    font-size: 1.2rem;
+  }
+}
+
+.comment__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 16px;
+  border-bottom: 2px #e1e1e1 solid;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-right: 0px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .comment__wrapper {
+    width: 525px;
+    padding-right: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comment__wrapper {
+    width: 528px;
+    padding-right: 0px;
+  }
+}
+
+.comment__left {
+  width: 20%;
+  margin-right: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .comment__left {
+    width: 15%;
+  }
+}
+
+.comment__photo {
+  background-color: #e1e1e1;
+  color: #e1e1e1;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 0px solid #ffffff;
+  margin-top: 10px;
+}
+
+.comment__right-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .comment__right-top {
+    width: 422px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comment__right-top {
+    width: 460px;
+  }
+}
+
+.comment__right {
+  width: 79%;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-right: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .comment__right {
+    width: 525px;
+    margin-right: 0px;
+    padding: 0px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    text-align: end;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comment__right {
+    width: 528px;
+    margin-right: 0px;
+    padding: 0px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    text-align: end;
+  }
+}
+
+.comment__full-name {
+  width: 60%;
+  font-family: "AvenirDemi";
+}
+
+@media screen and (min-width: 768px) {
+  .comment__full-name {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comment__full-name {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-right: 10px;
+  }
+}
+
+.comment__comment {
+  color: #323232;
+  font-size: 0.85rem;
+  line-height: 20px;
+  font-family: "AvenirRegular";
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .comment__comment {
+    font-size: 0.87rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .comment__comment {
+    width: 422px;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comment__comment {
+    min-width: 460px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -437,9 +678,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    text-align: left;
   }
 }
 
@@ -457,32 +696,7 @@
   }
 }
 
-.heading-5,
-.comment-date {
-  color: #afafaf;
-  font-size: 1rem;
-  line-height: 20px;
-  font-family: "AvenirMedium";
-  margin-bottom: 16px;
-  margin-top: 16px;
-}
-
-@media screen and (min-width: 768px) {
-  .heading-5,
-  .comment-date {
-    font-size: 1.1rem;
-    width: 422px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .heading-5,
-  .comment-date {
-    font-size: 1.2rem;
-  }
-}
-
-.new-comment-wrapper {
+.new-comment__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -493,20 +707,20 @@
 }
 
 @media screen and (min-width: 768px) {
-  .new-comment-wrapper {
+  .new-comment__wrapper {
     width: 525px;
     padding-right: 0px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .new-comment-wrapper {
+  .new-comment__wrapper {
     width: 528px;
     padding-right: 0px;
   }
 }
 
-.new-photo {
+.new-comment__photo {
   background-color: #e1e1e1;
   color: #e1e1e1;
   width: 50px;
@@ -518,23 +732,73 @@
 }
 
 @media screen and (min-width: 768px) {
-  .new-photo {
+  .new-comment__photo {
     margin-right: 0px;
   }
 }
 
-.photo {
-  background-color: #e1e1e1;
-  color: #e1e1e1;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 0px solid #ffffff;
-  margin-top: 10px;
+.new-comment__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.button:hover,
-.comment-submit:hover {
+@media screen and (min-width: 768px) {
+  .new-comment__name {
+    width: 422px;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .new-comment__name {
+    min-width: 460px;
+  }
+}
+
+.new-comment__comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .new-comment__comment {
+    text-align: left;
+    width: 422px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .new-comment__comment {
+    text-align: left;
+    min-width: 460px;
+  }
+}
+
+.new-comment__submit {
+  width: 224px;
+}
+
+@media screen and (min-width: 768px) {
+  .new-comment__submit {
+    width: 160px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-bottom: 24px;
+  }
+}
+
+.button__submit:hover,
+.new-comment__submit:hover {
   background-color: black;
   outline-style: none;
   outline: transparent;
@@ -616,199 +880,6 @@ textarea:focus {
 @media screen and (min-width: 768px) {
   .text-two {
     margin-bottom: 24px;
-  }
-}
-
-.comment-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 16px;
-  border-bottom: 2px #e1e1e1 solid;
-  margin-right: 0px;
-  margin-left: 0px;
-  padding-right: 0px;
-  width: 100%;
-}
-
-@media screen and (min-width: 768px) {
-  .comment-wrapper {
-    width: 525px;
-    padding-right: 0px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .comment-wrapper {
-    width: 528px;
-    padding-right: 0px;
-  }
-}
-
-.comment-left {
-  width: 20%;
-  margin-right: 0px;
-}
-
-@media screen and (min-width: 768px) {
-  .comment-left {
-    width: 15%;
-  }
-}
-
-.comment-right,
-.comment-name,
-.comment-comment {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-@media screen and (min-width: 768px) {
-  .comment-name,
-  .comment-comment {
-    width: 422px;
-    text-align: left;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .comment-name,
-  .comment-comment {
-    min-width: 460px;
-  }
-}
-
-.comment-right {
-  width: 79%;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-right: 16px;
-}
-
-@media screen and (min-width: 768px) {
-  .comment-right {
-    width: 525px;
-    margin-right: 0px;
-    padding: 0px;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    text-align: end;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .comment-right {
-    width: 528px;
-    margin-right: 0px;
-    padding: 0px;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    text-align: end;
-  }
-}
-
-.comment-right-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media screen and (min-width: 768px) {
-  .comment-right-top {
-    width: 422px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .comment-right-top {
-    width: 460px;
-  }
-}
-
-.comment-submit {
-  width: 224px;
-}
-
-@media screen and (min-width: 768px) {
-  .comment-submit {
-    width: 160px;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    margin-bottom: 24px;
-  }
-}
-
-.comment-full-name,
-.comment-date,
-.comment-comment {
-  color: #323232;
-  font-size: 0.85rem;
-  line-height: 20px;
-  font-family: "AvenirRegular";
-  margin-bottom: 8px;
-  margin-top: 8px;
-}
-
-@media screen and (min-width: 1200px) {
-  .comment-full-name,
-  .comment-date,
-  .comment-comment {
-    font-size: 0.87rem;
-  }
-}
-
-.comment-date {
-  color: #afafaf;
-  text-align: right;
-  width: 40%;
-}
-
-@media screen and (min-width: 1200px) {
-  .comment-date {
-    text-align: left;
-  }
-}
-
-.comment-full-name {
-  width: 60%;
-  font-family: "AvenirDemi";
-}
-
-@media screen and (min-width: 768px) {
-  .comment-full-name {
-    text-align: left;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .comment-full-name {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin-right: 10px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .comment-comment {
-    text-align: left;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .comment-comment {
-    text-align: left;
-    min-width: 460px;
   }
 }
 /*# sourceMappingURL=main.css.map */
