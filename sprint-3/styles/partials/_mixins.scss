@@ -142,21 +142,11 @@
   font-size: 1.1rem;
   line-height: 18px;
   border-radius: $pixel-4;
-  @include tablet {
-    margin: 0px;
-    padding: 0px;
-    width: 422px;
-  }
-  @include desktop {
-    margin: 0px;
-    padding: 0px;
-    min-width: 460px;
-  }
 }
 
 @mixin date-comment-style {
   color: $silver;
-  text-align: right;
+
   width: 40%;
   font-size: 0.85rem;
   line-height: 20px;
@@ -164,7 +154,6 @@
   margin-bottom: $pixel-8;
   margin-top: $pixel-8;
   @include desktop {
-    text-align: left;
     font-size: 0.87rem;
   }
 }

@@ -400,6 +400,21 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .comment {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .comment__section {
   width: 100%;
   padding-left: 16px;
@@ -483,18 +498,17 @@
 
 .comment__date {
   color: #afafaf;
-  text-align: right;
   width: 40%;
   font-size: 0.85rem;
   line-height: 20px;
   font-family: "AvenirRegular";
   margin-bottom: 8px;
   margin-top: 8px;
+  text-align: right;
 }
 
 @media screen and (min-width: 1200px) {
   .comment__date {
-    text-align: left;
     font-size: 0.87rem;
   }
 }
@@ -536,12 +550,12 @@
   margin-right: 0px;
   margin-left: 0px;
   padding-right: 0px;
-  width: 100%;
+  width: 290px;
 }
 
 @media screen and (min-width: 768px) {
   .comment__wrapper {
-    width: 525px;
+    width: 490px;
     padding-right: 0px;
   }
 }
@@ -599,24 +613,25 @@
   width: 79%;
   margin-left: 0px;
   margin-right: 0px;
-  padding-right: 16px;
+  padding-right: 0px;
 }
 
 @media screen and (min-width: 768px) {
   .comment__right {
-    width: 525px;
+    width: auto;
     margin-right: 0px;
     padding: 0px;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
     text-align: end;
+    margin-right: 0px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .comment__right {
-    width: 528px;
+    width: auto;
     margin-right: 0px;
     padding: 0px;
     -webkit-box-align: end;
@@ -663,6 +678,7 @@
 
 @media screen and (min-width: 768px) {
   .comment__comment {
+    margin-right: 0px;
     width: 422px;
     text-align: left;
   }
@@ -679,6 +695,25 @@
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: left;
+  }
+}
+
+.comment__container {
+  width: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .comment__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -703,12 +738,12 @@
   margin-bottom: 16px;
   border-bottom: 2px #e1e1e1 solid;
   margin-right: 0px;
-  width: 100%;
+  width: 290px;
 }
 
 @media screen and (min-width: 768px) {
   .new-comment__wrapper {
-    width: 525px;
+    width: 490px;
     padding-right: 0px;
   }
 }
@@ -727,14 +762,7 @@
   height: 50px;
   border-radius: 50%;
   border: 0px solid #ffffff;
-  margin-top: 50px;
-  margin-right: 10px;
-}
-
-@media screen and (min-width: 768px) {
-  .new-comment__photo {
-    margin-right: 0px;
-  }
+  margin-top: 10px;
 }
 
 .new-comment__name {
@@ -749,14 +777,14 @@
 
 @media screen and (min-width: 768px) {
   .new-comment__name {
-    width: 422px;
+    width: auto;
     text-align: left;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .new-comment__name {
-    min-width: 460px;
+    min-width: auto;
   }
 }
 
@@ -773,14 +801,14 @@
 @media screen and (min-width: 768px) {
   .new-comment__comment {
     text-align: left;
-    width: 422px;
+    width: auto;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .new-comment__comment {
     text-align: left;
-    min-width: 460px;
+    min-width: auto;
   }
 }
 
@@ -821,24 +849,6 @@
   border-radius: 4px;
 }
 
-@media screen and (min-width: 768px) {
-  .text,
-  .text-two {
-    margin: 0px;
-    padding: 0px;
-    width: 422px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .text,
-  .text-two {
-    margin: 0px;
-    padding: 0px;
-    min-width: 460px;
-  }
-}
-
 input.text {
   padding-top: 8px;
   padding-bottom: 8px;
@@ -851,19 +861,6 @@ textarea.text-two {
   top: 0px;
   color: #323232;
   padding-left: 8px;
-}
-
-input:focus,
-textarea:focus {
-  border: 2px solid #323232;
-  -webkit-appearance: none !important;
-     -moz-appearance: none !important;
-          appearance: none !important;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  outline: none !important;
-  outline-color: transparent;
-  overflow: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -881,5 +878,18 @@ textarea:focus {
   .text-two {
     margin-bottom: 24px;
   }
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid #323232;
+  -webkit-appearance: none !important;
+     -moz-appearance: none !important;
+          appearance: none !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none !important;
+  outline-color: transparent;
+  overflow: auto;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,8 +1,5 @@
 // Eula Bengco MAIN JAVASCRIPT FILE
 
-//posts the comments when the page renders
-axiosGetFn();
-
 //grabs the parent container
 let commentParent = document.querySelector(".comment__container");
 
@@ -28,6 +25,9 @@ function axiosGetFn() {
       console.log("Error!");
     });
 }
+
+//posts the comments when the page renders
+axiosGetFn();
 
 function displayComment(commentsObjArrData) {
   let commentWrapper = document.createElement("div");
@@ -76,10 +76,10 @@ function displayComment(commentsObjArrData) {
 
 //addEventListener from the HTML form
 let form = document.getElementById("comment__form");
-form.addEventListener("submit", commentSubmit => {
-  commentSubmit.preventDefault();
-  let newName = displayComment.target.name.value;
-  let newComment = displayComment.target.comment.value;
+form.addEventListener("submit", postComment => {
+  postComment.preventDefault();
+  let newName = postComment.target.name.value;
+  let newComment = postComment.target.comment.value;
 
   //rerenders the comment's section upon submit
   commentParent.innerText = "";

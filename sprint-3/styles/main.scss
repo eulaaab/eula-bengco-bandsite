@@ -217,11 +217,11 @@
 
 //COMMENTS SECTION
 .comment {
-  // @include tablet {
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  // }
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   &__section {
     width: 100%;
     padding-left: $pixel-16;
@@ -256,6 +256,7 @@
   }
   &__date {
     @include date-comment-style;
+    text-align: right;
     @include desktop {
       text-align: left;
     }
@@ -270,9 +271,9 @@
     margin-right: 0px;
     margin-left: 0px;
     padding-right: 0px;
-    width: 100%;
+    width: 290px;
     @include tablet {
-      width: 525px;
+      width: 490px;
       padding-right: 0px;
     }
     @include desktop {
@@ -311,16 +312,17 @@
     width: 79%;
     margin-left: 0px;
     margin-right: 0px;
-    padding-right: 16px;
+    padding-right: 0px;
     @include tablet {
-      width: 525px;
+      width: auto;
       margin-right: 0px;
       padding: 0px;
       align-items: flex-end;
       text-align: end;
+      margin-right: 0px;
     }
     @include desktop {
-      width: 528px;
+      width: auto;
       margin-right: 0px;
       padding: 0px;
       align-items: flex-end;
@@ -341,6 +343,7 @@
   &__comment {
     @include default-comment-style;
     @include tablet {
+      margin-right: 0px;
       width: 422px;
       text-align: left;
     }
@@ -349,6 +352,14 @@
       display: flex;
       flex-direction: column;
       text-align: left;
+    }
+  }
+  &__container {
+    width: auto;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 }
@@ -368,9 +379,9 @@
     margin-bottom: $pixel-16;
     border-bottom: 2px $mercury solid;
     margin-right: 0px;
-    width: 100%;
+    width: 290px;
     @include tablet {
-      width: 525px;
+      width: 490px;
       padding-right: 0px;
     }
     @include desktop {
@@ -385,21 +396,17 @@
     height: 50px;
     border-radius: 50%;
     border: 0px solid $white;
-    margin-top: 50px;
-    margin-right: 10px;
-    @include tablet {
-      margin-right: 0px;
-    }
+    margin-top: 10px;
   }
   &__name {
     display: flex;
     flex-direction: column;
     @include tablet {
-      width: 422px;
+      width: auto;
       text-align: left;
     }
     @include desktop {
-      min-width: 460px;
+      min-width: auto;
     }
   }
   &__comment {
@@ -407,11 +414,11 @@
     flex-direction: column;
     @include tablet {
       text-align: left;
-      width: 422px;
+      width: auto;
     }
     @include desktop {
       text-align: left;
-      min-width: 460px;
+      min-width: auto;
     }
   }
   &__submit {
@@ -459,6 +466,18 @@ textarea.text-two {
   padding-left: $pixel-8;
 }
 
+.text {
+  @include tablet {
+    align-self: flex-end;
+  }
+}
+.text-two {
+  height: 144px;
+  @include tablet {
+    margin-bottom: $pixel-24;
+  }
+}
+
 input,
 textarea {
   &:focus {
@@ -470,16 +489,5 @@ textarea {
     outline: none !important;
     outline-color: transparent;
     overflow: auto;
-  }
-}
-.text {
-  @include tablet {
-    align-self: flex-end;
-  }
-}
-.text-two {
-  height: 144px;
-  @include tablet {
-    margin-bottom: $pixel-24;
   }
 }
